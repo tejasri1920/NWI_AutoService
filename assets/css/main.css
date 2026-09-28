@@ -1,0 +1,204 @@
+/* ==========================================================================
+   NWI Auto Service and Towing — brand design tokens & base layer
+   ========================================================================== */
+
+:root {
+  /* Surfaces */
+  --color-asphalt:  #111315;   /* page canvas */
+  --color-graphite: #1B1E22;   /* cards, panels */
+  --color-steel:    #2E343B;   /* borders, dividers */
+
+  /* Type & accents */
+  --color-chrome:   #F8F9FA;   /* primary text */
+  --color-silver:   #A6ADB5;   /* secondary text, metallic accents */
+
+  /* Emergency & action — reserved for dispatch pills, dialers, urgency cues */
+  --color-alert:        #E63946;
+  --color-alert-strong: #C62833; /* button fill: white text passes WCAG AA at all sizes */
+  --color-alert-amber:  #F77F00; /* pair with asphalt text, never white */
+
+  /* Typography */
+  --font-display: 'Oswald', Impact, 'Arial Narrow', sans-serif;
+  --font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Shape & motion */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Layout */
+  --header-height: 72px;
+  --mobile-dialer-height: 64px;
+
+  color-scheme: dark;
+}
+
+/* --- Base ---------------------------------------------------------------- */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-height) + 16px);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--color-asphalt);
+  color: var(--color-chrome);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+::selection {
+  background: var(--color-alert-strong);
+  color: var(--color-chrome);
+}
+
+/* Hidden sprite: zero-size instead of display:none so gradients still resolve */
+.svg-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* --- Accessibility ------------------------------------------------------- */
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 100;
+  padding: 12px 20px;
+  background: var(--color-chrome);
+  color: var(--color-asphalt);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: top 0.2s var(--ease-out);
+}
+.skip-link:focus { top: 12px; }
+
+:focus-visible {
+  outline: 3px solid var(--color-alert-amber);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+#main:focus { outline: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* --- Reusable brand primitives (consumed by later phases) --------------- */
+
+.container-site {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+@media (min-width: 768px) {
+  .container-site { padding-inline: 32px; }
+}
+
+.surface-card {
+  background: var(--color-graphite);
+  border: 1px solid var(--color-steel);
+  border-radius: var(--radius-md);
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-silver);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 22px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s var(--ease-out), border-color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+}
+.btn:active { transform: translateY(1px); }
+.btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+.btn-emergency {
+  background: var(--color-alert-strong);
+  color: var(--color-chrome);
+  border: 1px solid var(--color-alert);
+}
+.btn-emergency:hover { background: var(--color-alert); }
+
+.btn-steel {
+  background: transparent;
+  color: var(--color-chrome);
+  border: 1px solid var(--color-steel);
+}
+.btn-steel:hover {
+  background: var(--color-graphite);
+  border-color: var(--color-silver);
+}
+
+.pill-emergency {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(230, 57, 70, 0.12);
+  border: 1px solid rgba(230, 57, 70, 0.45);
+  color: #FF8A93;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.pill-emergency::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-alert);
+  box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.6);
+  animation: dispatch-pulse 2s infinite;
+}
+
+@keyframes dispatch-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.6); }
+  70%  { box-shadow: 0 0 0 8px rgba(230, 57, 70, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(230, 57, 70, 0); }
+}
