@@ -1,76 +1,294 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- Primary SEO -->
   <title>NWI Auto Service and Towing | 24/7 Towing &amp; Auto Repair in Hammond, IN</title>
-  <meta name="description" content="24/7 emergency towing, roadside assistance, heavy truck towing, and honest auto repair in Hammond, IN. Brakes, tires, tune-ups, and emissions at 6704 Kennedy Ave. Call Roberto: (219) 333-9293.">
-  <meta name="keywords" content="towing Hammond IN, 24/7 tow truck Hammond, roadside assistance Northwest Indiana, heavy truck towing, semi towing I-80/94, auto repair Kennedy Ave, used tires Hammond, truck tires Hammond, emissions Hammond IN">
-  <meta name="author" content="NWI Auto Service and Towing">
+  <meta name="description" content="24/7 towing, roadside help, heavy truck towing, tires, and honest auto repair at 6704 Kennedy Ave, Hammond, IN. Call Roberto direct: (219) 333-9293.">
+  <meta name="keywords" content="towing Hammond IN, 24/7 tow truck Hammond, roadside assistance Northwest Indiana, heavy truck towing, semi towing I-80/94, auto repair Kennedy Ave, used tires Hammond, truck tires Hammond, brakes Hammond IN">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="format-detection" content="telephone=yes">
-  <meta name="theme-color" content="#111315">
+  <meta name="theme-color" content="#101214">
   <meta name="color-scheme" content="dark">
-
-  <!-- Local SEO -->
   <meta name="geo.region" content="US-IN">
   <meta name="geo.placename" content="Hammond, Indiana">
 
-  <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="NWI Auto Service and Towing">
   <meta property="og:title" content="NWI Auto Service and Towing | 24/7 Towing &amp; Auto Repair in Hammond, IN">
-  <meta property="og:description" content="Fast 24/7 towing and roadside help, heavy vehicle recovery, and honest mechanic diagnostics at 6704 Kennedy Ave, Hammond. Call (219) 333-9293.">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:description" content="Fast dispatch, honest mechanic work, best prices in town. 6704 Kennedy Ave, Hammond. Call (219) 333-9293.">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="NWI Auto Service and Towing | 24/7 Towing in Hammond, IN">
-  <meta name="twitter:description" content="24/7 towing, roadside assistance, and auto repair in Hammond, IN. Call Roberto: (219) 333-9293.">
+  <meta name="twitter:description" content="24/7 towing, roadside help, tires, and auto repair in Hammond, IN. Call Roberto: (219) 333-9293.">
 
-  <!-- Icons -->
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 
-  <!-- Fonts -->
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS (CDN) + brand theme -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            asphalt:  '#111315',
-            graphite: '#1B1E22',
-            steel:    '#2E343B',
-            chrome:   '#F8F9FA',
-            silver:   '#A6ADB5',
-            alert: {
-              DEFAULT: '#E63946',
-              strong:  '#C62833',
-              amber:   '#F77F00'
-            }
+            asphalt: '#101214',
+            panel:   '#16191D',
+            panel2:  '#1B1E22',
+            line:    '#262A30',
+            chrome:  '#F8F9FA',
+            silver:  '#D1D5DB',
+            muted:   '#A6ADB5',
+            safety: { DEFAULT: '#DC2626', dark: '#B91C1C', text: '#F87171' }
           },
           fontFamily: {
             display: ['Oswald', 'Impact', 'Arial Narrow', 'sans-serif'],
             sans:    ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif']
-          },
-          maxWidth: {
-            site: '1200px'
-          },
-          boxShadow: {
-            plate: '0 1px 0 0 rgba(255,255,255,0.04) inset, 0 12px 32px -12px rgba(0,0,0,0.6)'
           }
         }
       }
     };
   </script>
 
-  <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    :root {
+      --asphalt: #101214;
+      --panel:   #16191D;
+      --panel-2: #1B1E22;
+      --line:    #262A30;
+      --line-hi: #3A4048;
+      --chrome:  #F8F9FA;
+      --silver:  #D1D5DB;
+      --muted:   #A6ADB5;
+      --safety:      #DC2626; /* emergency only: dispatch, click-to-call, 24/7 */
+      --safety-dark: #B91C1C;
+      --safety-text: #F87171; /* red text on dark panels */
+      --focus:   #F59E0B;
+      --header-h: 108px;
+      color-scheme: dark;
+    }
+    @media (max-width: 767px) { :root { --header-h: 100px; } }
+
+    html { scroll-padding-top: calc(var(--header-h) + 12px); -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--asphalt);
+      color: var(--chrome);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, .font-display {
+      font-family: 'Oswald', Impact, 'Arial Narrow', sans-serif;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+    h1, h2, h3 { font-weight: 700; color: var(--chrome); }
+    ::selection { background: var(--safety); color: #fff; }
+
+    .svg-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+    /* Accessibility */
+    .skip-link {
+      position: absolute; top: -100px; left: 16px; z-index: 100;
+      padding: 12px 20px; background: var(--chrome); color: var(--asphalt);
+      font-weight: 600; border-radius: 2px; text-decoration: none;
+    }
+    .skip-link:focus { top: 12px; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+    #main:focus { outline: none; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+
+    .wrap { width: 100%; max-width: 1200px; margin-inline: auto; padding-inline: 16px; }
+    @media (min-width: 768px) { .wrap { padding-inline: 32px; } }
+
+    /* Buttons: squared-off, tactile, high-contrast states */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 48px; padding: 12px 22px;
+      border: 2px solid transparent; border-radius: 3px;
+      font-family: 'Oswald', Impact, sans-serif; font-size: 1.0625rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; white-space: nowrap;
+      cursor: pointer; transition: background-color .15s, border-color .15s, color .15s, transform .08s;
+    }
+    .btn:active { transform: translateY(2px); }
+    .btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+    .btn-lg { min-height: 56px; font-size: 1.1875rem; padding-inline: 26px; }
+    .btn-call { background: var(--safety); border-color: var(--safety); color: #fff; box-shadow: 0 3px 0 0 #7F1D1D; }
+    .btn-call:hover { background: var(--safety-dark); border-color: var(--safety-dark); }
+    .btn-call:active { box-shadow: 0 1px 0 0 #7F1D1D; }
+    .btn-solid { background: var(--chrome); border-color: var(--chrome); color: var(--asphalt); box-shadow: 0 3px 0 0 #6B7280; }
+    .btn-solid:hover { background: var(--silver); border-color: var(--silver); }
+    .btn-solid:active { box-shadow: 0 1px 0 0 #6B7280; }
+    .btn-outline { background: var(--asphalt); border-color: var(--line-hi); color: var(--chrome); }
+    .btn-outline:hover { border-color: var(--chrome); background: var(--panel-2); }
+    .btn[disabled] { opacity: .6; cursor: wait; }
+
+    /* Labels & status */
+    .label {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'Oswald', Impact, sans-serif; font-size: .8125rem; font-weight: 600;
+      letter-spacing: .16em; text-transform: uppercase; color: var(--muted);
+    }
+    .label::before { content: ""; width: 24px; height: 2px; background: var(--line-hi); }
+    .tag-live {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 5px 10px; border-radius: 2px;
+      background: var(--safety); color: #fff;
+      font-family: 'Oswald', Impact, sans-serif; font-size: .8125rem; font-weight: 600;
+      letter-spacing: .1em; text-transform: uppercase;
+    }
+    .tag-live::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #fff; animation: blink 1.6s steps(2, start) infinite; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--safety); flex-shrink: 0; box-shadow: 0 0 0 3px rgba(220, 38, 38, .25); }
+    .dot--live { animation: live 2s infinite; }
+    @keyframes blink { to { visibility: hidden; } }
+    @keyframes live { 0% { box-shadow: 0 0 0 0 rgba(220,38,38,.6); } 70% { box-shadow: 0 0 0 8px rgba(220,38,38,0); } 100% { box-shadow: 0 0 0 0 rgba(220,38,38,0); } }
+    .status-open { color: #4ADE80; font-weight: 600; }
+    .status-closed { color: var(--chrome); font-weight: 600; }
+
+    /* Header */
+    .utility a { color: inherit; text-decoration: none; }
+    .utility svg { width: 14px; height: 14px; flex-shrink: 0; }
+    .site-header.is-scrolled { box-shadow: 0 6px 18px -8px rgba(0,0,0,.9); }
+    .nav-link { position: relative; padding-block: 6px; color: var(--silver); text-decoration: none; }
+    .nav-link:hover, .nav-link[aria-current="true"] { color: var(--chrome); }
+    .nav-link[aria-current="true"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: var(--chrome); }
+    .menu-toggle {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 48px; height: 48px; border: 2px solid var(--line-hi); border-radius: 3px;
+      background: var(--asphalt); color: var(--chrome); cursor: pointer;
+    }
+    .menu-toggle .icon-close { display: none; }
+    .menu-toggle[aria-expanded="true"] .icon-open { display: none; }
+    .menu-toggle[aria-expanded="true"] .icon-close { display: block; }
+    @media (min-width: 1024px) { .menu-toggle { display: none; } }
+    .btn.header-call { display: none; }
+    @media (min-width: 768px) { .btn.header-call { display: inline-flex; } }
+    .mobile-menu { max-height: calc(100vh - var(--header-h)); overflow-y: auto; }
+    .mobile-link { display: block; padding: 13px 4px; border-bottom: 1px solid var(--line); color: var(--chrome); text-decoration: none; font-weight: 500; }
+
+    /* Hero */
+    .hero-overlay { background: linear-gradient(180deg, rgba(16,18,20,.80) 0%, rgba(16,18,20,.88) 60%, #101214 100%); }
+    @media (min-width: 1024px) {
+      .hero-overlay { background: linear-gradient(90deg, #101214 0%, rgba(16,18,20,.85) 45%, rgba(16,18,20,.25) 100%); }
+    }
+
+    /* Panels */
+    .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; }
+    .panel-img { display: block; width: 100%; height: 12rem; object-fit: cover; border-bottom: 1px solid var(--line); border-radius: 4px 4px 0 0; background: var(--panel-2); }
+
+    .section { padding-block: 64px; border-bottom: 1px solid var(--line); }
+    @media (min-width: 768px) { .section { padding-block: 88px; } }
+    .section-title { margin-top: 14px; font-size: clamp(2rem, 4.5vw, 3rem); }
+    .section-lede { margin-top: 14px; max-width: 42rem; font-size: 1.0625rem; color: var(--silver); }
+
+    /* Checklists */
+    .checks { display: grid; gap: 8px; font-size: .9375rem; color: var(--chrome); }
+    .checks li { position: relative; padding-left: 26px; }
+    .checks li::before {
+      content: ""; position: absolute; left: 0; top: .3em; width: 16px; height: 16px; background: var(--muted);
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / contain no-repeat;
+              mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / contain no-repeat;
+    }
+    @media (min-width: 640px) { .checks--2 { grid-template-columns: 1fr 1fr; column-gap: 24px; } }
+
+    /* Dispatch board */
+    .board { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--safety); border-radius: 4px; }
+    .board-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 1px solid var(--line); background: #121417; }
+    .board-group { padding: 10px 20px 4px; font-family: 'Oswald', Impact, sans-serif; font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); background: #121417; border-bottom: 1px solid var(--line); }
+    .board-row { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; align-items: start; padding: 16px 20px; border-bottom: 1px solid var(--line); }
+    .board-row .dot { margin-top: 7px; }
+    .board-name { font-family: 'Oswald', Impact, sans-serif; font-size: 1.125rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--chrome); }
+    .board-desc { grid-column: 2; font-size: .9375rem; color: var(--muted); }
+    .board-status { grid-column: 2; font-family: 'Oswald', Impact, sans-serif; font-size: .8125rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--safety-text); }
+    @media (min-width: 640px) {
+      .board-row { grid-template-columns: auto 1fr auto; }
+      .board-status { grid-column: 3; grid-row: 1; text-align: right; white-space: nowrap; }
+    }
+
+    /* Spec sheet (tires) */
+    .spec { width: 100%; border-collapse: collapse; font-size: .9375rem; }
+    .spec caption { text-align: left; }
+    .spec th, .spec td { padding: 12px 0; border-top: 1px solid var(--line); vertical-align: top; text-align: left; }
+    .spec th { width: 34%; padding-right: 16px; font-family: 'Oswald', Impact, sans-serif; font-size: .8125rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+    .spec td { color: var(--chrome); }
+
+    /* Hours */
+    .hours { width: 100%; border-collapse: collapse; font-size: .9375rem; }
+    .hours th, .hours td { padding: 10px 12px; border-top: 1px solid var(--line); }
+    .hours th { text-align: left; font-weight: 500; color: var(--muted); }
+    .hours td { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .hours tr.is-today { background: var(--asphalt); }
+    .hours tr.is-today th { color: var(--chrome); font-weight: 700; }
+    .hours tr.is-today th::after { content: "Today"; margin-left: 8px; padding: 1px 6px; border: 1px solid var(--line-hi); border-radius: 2px; font-size: .6875rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--silver); }
+    @media (max-width: 400px) { .hours th, .hours td { padding-inline: 8px; } }
+
+    .map-frame { position: relative; min-height: 360px; flex: 1; background: var(--panel-2); }
+    .map-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: grayscale(.4) contrast(1.05); }
+
+    /* Form */
+    .field { display: grid; gap: 8px; border: 0; margin: 0; padding: 0; min-width: 0; }
+    .field label, .field legend { font-size: .9375rem; font-weight: 600; color: var(--chrome); }
+    .field legend { margin-bottom: 8px; }
+    .field input[type="text"], .field input[type="tel"], .field select {
+      width: 100%; min-height: 52px; padding: 12px 14px;
+      background: var(--asphalt); border: 1px solid var(--line-hi); border-radius: 3px;
+      color: var(--chrome); font: inherit; font-size: 1rem;
+    }
+    .field input::placeholder { color: #80878F; }
+    .field input:focus-visible, .field select:focus-visible { border-color: var(--silver); outline-offset: 1px; }
+    .field [aria-invalid="true"] { border-color: var(--safety); }
+    .field select {
+      appearance: none; padding-right: 44px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23A6ADB5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 14px center; background-size: 20px;
+    }
+    .field select option, .field select optgroup { background: var(--panel); color: var(--chrome); }
+    .field-hint { font-size: .8125rem; color: var(--muted); }
+    .field-error { font-size: .875rem; font-weight: 500; color: var(--safety-text); }
+    .segmented { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .segmented label { position: relative; display: block; cursor: pointer; }
+    .segmented input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+    .segmented span {
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+      min-height: 72px; padding: 10px 6px; text-align: center;
+      font-size: .875rem; font-weight: 600; line-height: 1.2; color: var(--silver);
+      background: var(--asphalt); border: 1px solid var(--line-hi); border-radius: 3px;
+    }
+    .segmented span svg { width: 22px; height: 22px; }
+    .segmented label:hover span { border-color: var(--muted); }
+    .segmented input:checked + span { color: var(--asphalt); background: var(--chrome); border-color: var(--chrome); }
+    .segmented input:focus-visible + span { outline: 3px solid var(--focus); outline-offset: 2px; }
+    .segmented[data-invalid="true"] span { border-color: var(--safety); }
+    .form-status { padding: 16px; border: 1px solid var(--line-hi); border-radius: 3px; background: var(--asphalt); font-size: .9375rem; }
+    .form-status a { font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+    .form-status.is-success { border-color: #3E7D52; }
+    .form-status.is-error { border-color: var(--safety); }
+
+    /* Footer */
+    .footer-title { margin-bottom: 14px; font-size: .875rem; letter-spacing: .14em; }
+    .footer-links { display: grid; gap: 2px; font-size: .9375rem; }
+    .footer-links a { display: inline-block; padding-block: 6px; color: var(--muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--chrome); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* Mobile emergency bar */
+    .mobile-dialer {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+      display: flex; gap: 8px; padding: 8px 16px calc(8px + env(safe-area-inset-bottom));
+      background: #0B0C0E; border-top: 1px solid var(--line);
+    }
+    .mobile-dialer .btn { min-height: 52px; padding-inline: 16px; }
+    @media (max-width: 767px) { body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); } }
+    @media (min-width: 768px) { .mobile-dialer { display: none; } }
+  </style>
 
   <!-- Structured data: shop (AutoRepair) with a 24/7 towing & roadside department (EmergencyService) -->
   <script type="application/ld+json">
@@ -195,21 +413,15 @@
 
 <body class="bg-asphalt text-chrome font-sans antialiased">
 
-  <!-- Inline SVG sprite: brand crest + UI icon set. Referenced via <use href="#id">. -->
   <svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite" aria-hidden="true" focusable="false">
     <defs>
       <linearGradient id="grad-steel" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%"   stop-color="#F8F9FA"/>
-        <stop offset="55%"  stop-color="#A6ADB5"/>
-        <stop offset="100%" stop-color="#6B737C"/>
+        <stop offset="0%" stop-color="#F8F9FA"/><stop offset="55%" stop-color="#A6ADB5"/><stop offset="100%" stop-color="#6B737C"/>
       </linearGradient>
       <linearGradient id="grad-shield" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%"   stop-color="#2E343B"/>
-        <stop offset="100%" stop-color="#1B1E22"/>
+        <stop offset="0%" stop-color="#2E343B"/><stop offset="100%" stop-color="#16191D"/>
       </linearGradient>
     </defs>
-
-    <!-- Winged automotive crest: wings, crossed wrenches, shield, steering wheel -->
     <symbol id="nwi-crest" viewBox="0 0 240 120">
       <g id="crest-wing" fill="url(#grad-steel)">
         <path d="M88 30C68 20 38 16 8 22C36 28 60 34 86 42Z"/>
@@ -218,688 +430,503 @@
         <path d="M92 77C80 73 66 73 50 77C64 80 78 83 95 86Z"/>
       </g>
       <use href="#crest-wing" transform="matrix(-1 0 0 1 240 0)"/>
-
       <g fill="#A6ADB5">
         <g transform="translate(120 60) rotate(45)">
-          <rect x="-3.5" y="-52" width="7" height="104" rx="2"/>
-          <circle cx="0" cy="-54" r="9"/>
-          <circle cx="0" cy="54" r="9"/>
-          <rect x="-3.5" y="-66" width="7" height="12" fill="#111315"/>
-          <rect x="-3.5" y="54" width="7" height="12" fill="#111315"/>
+          <rect x="-3.5" y="-52" width="7" height="104" rx="2"/><circle cx="0" cy="-54" r="9"/><circle cx="0" cy="54" r="9"/>
+          <rect x="-3.5" y="-66" width="7" height="12" fill="#101214"/><rect x="-3.5" y="54" width="7" height="12" fill="#101214"/>
         </g>
         <g transform="translate(120 60) rotate(-45)">
-          <rect x="-3.5" y="-52" width="7" height="104" rx="2"/>
-          <circle cx="0" cy="-54" r="9"/>
-          <circle cx="0" cy="54" r="9"/>
-          <rect x="-3.5" y="-66" width="7" height="12" fill="#111315"/>
-          <rect x="-3.5" y="54" width="7" height="12" fill="#111315"/>
+          <rect x="-3.5" y="-52" width="7" height="104" rx="2"/><circle cx="0" cy="-54" r="9"/><circle cx="0" cy="54" r="9"/>
+          <rect x="-3.5" y="-66" width="7" height="12" fill="#101214"/><rect x="-3.5" y="54" width="7" height="12" fill="#101214"/>
         </g>
       </g>
-
-      <path d="M120 12L154 23V58C154 81 139 97 120 108C101 97 86 81 86 58V23Z"
-            fill="url(#grad-shield)" stroke="url(#grad-steel)" stroke-width="3.5" stroke-linejoin="round"/>
-
+      <path d="M120 12L154 23V58C154 81 139 97 120 108C101 97 86 81 86 58V23Z" fill="url(#grad-shield)" stroke="url(#grad-steel)" stroke-width="3.5" stroke-linejoin="round"/>
       <g fill="none" stroke="#F8F9FA" stroke-width="4" stroke-linecap="round">
-        <circle cx="120" cy="58" r="19"/>
-        <path d="M101.5 55H114M126 55H138.5M120 64V77"/>
+        <circle cx="120" cy="58" r="19"/><path d="M101.5 55H114M126 55H138.5M120 64V77"/>
       </g>
-      <circle cx="120" cy="58" r="6" fill="#E63946"/>
+      <circle cx="120" cy="58" r="6" fill="#DC2626"/>
     </symbol>
 
-    <!-- UI icons (24x24, stroke-based, inherit currentColor) -->
-    <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-    </symbol>
-    <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
-      <circle cx="12" cy="10" r="3"/>
-    </symbol>
-    <symbol id="icon-directions" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M3 11 22 2 13 21 11 13 3 11z"/>
-    </symbol>
-    <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="10"/>
-      <path d="M12 6v6l4 2"/>
-    </symbol>
-    <symbol id="icon-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
-    </symbol>
-    <symbol id="icon-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-    </symbol>
-    <symbol id="icon-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/>
-      <path d="M15 18H9"/>
-      <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/>
-      <circle cx="17" cy="18" r="2"/>
-      <circle cx="7" cy="18" r="2"/>
-    </symbol>
-    <symbol id="icon-tire" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="10"/>
-      <circle cx="12" cy="12" r="4"/>
-      <path d="M12 2v6M12 16v6M2 12h6M16 12h6"/>
-    </symbol>
-    <symbol id="icon-shield-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-      <path d="m9 12 2 2 4-4"/>
-    </symbol>
-    <symbol id="icon-battery" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="2" y="7" width="16" height="10" rx="2"/>
-      <path d="M22 11v2M7 12h4M9 10v4"/>
-    </symbol>
-    <symbol id="icon-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="7.5" cy="15.5" r="5.5"/>
-      <path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/>
-    </symbol>
-    <symbol id="icon-fuel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M3 22h12M4 9h10M14 22V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v18"/>
-      <path d="M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 4 0V9.83a2 2 0 0 0-.59-1.42L18 5"/>
-    </symbol>
-    <symbol id="icon-hook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 2v10"/>
-      <path d="M12 12a4 4 0 1 1-4 4"/>
-      <path d="M8 16l-2-2"/>
-      <path d="M9 2h6"/>
-    </symbol>
-    <symbol id="icon-flatbed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M1 15h13V8h4.5l3.5 4v3h-2"/>
-      <path d="M3 11h8l1 2"/>
-      <circle cx="6" cy="17" r="2"/>
-      <circle cx="17" cy="17" r="2"/>
-    </symbol>
-    <symbol id="icon-rv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="2" y="5" width="17" height="11" rx="2"/>
-      <path d="M19 10h2l1 3v3h-3"/>
-      <path d="M6 9h4M13 9h3"/>
-      <circle cx="7" cy="17" r="2"/>
-      <circle cx="16" cy="17" r="2"/>
-    </symbol>
-    <symbol id="icon-fleet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M3 21h18"/>
-      <path d="M5 21V7l7-4 7 4v14"/>
-      <path d="M9 21v-6h6v6"/>
-      <path d="M9 10h6"/>
-    </symbol>
-    <symbol id="icon-hardhat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M2 18h20"/>
-      <path d="M4 18v-2a8 8 0 0 1 16 0v2"/>
-      <path d="M10 9V5h4v4"/>
-    </symbol>
-    <symbol id="icon-disc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="10"/>
-      <circle cx="12" cy="12" r="3"/>
-      <path d="M12 5.5v.01M18.5 12h.01M12 18.5v.01M5.5 12h.01"/>
-    </symbol>
-    <symbol id="icon-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="m12 14 4-4"/>
-      <path d="M3.34 19a10 10 0 1 1 17.32 0"/>
-    </symbol>
-    <symbol id="icon-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
-    </symbol>
-    <symbol id="icon-activity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-    </symbol>
-    <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M20 6 9 17l-5-5"/>
-    </symbol>
-    <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M5 12h14M12 5l7 7-7 7"/>
-    </symbol>
-    <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M4 6h16M4 12h16M4 18h16"/>
-    </symbol>
-    <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M18 6 6 18M6 6l12 12"/>
-    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-directions" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 22 2 13 21 11 13 3 11z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-tire" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M12 2v6M12 16v6M2 12h6M16 12h6"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41 13.42 20.58a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><circle cx="7" cy="7" r="1.5"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></symbol>
+    <symbol id="i-hardhat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18h20"/><path d="M4 18v-2a8 8 0 0 1 16 0v2"/><path d="M10 9V5h4v4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
   </svg>
 
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <!-- ===================== Sticky navigation ===================== -->
-  <header id="site-header" class="site-header sticky top-0 z-50 border-b border-steel bg-asphalt/90 backdrop-blur">
-    <div class="container-site flex h-[72px] items-center justify-between gap-4">
-
-      <a href="#top" class="flex items-center gap-3 min-w-0" aria-label="NWI Auto Service and Towing, back to top">
-        <svg class="h-9 w-[72px] shrink-0" aria-hidden="true" focusable="false"><use href="#nwi-crest"/></svg>
-        <span class="flex flex-col leading-none min-w-0">
-          <span class="font-display text-lg font-bold uppercase tracking-wide text-chrome sm:text-xl">NWI Auto Service</span>
-          <span class="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-silver">and Towing · Hammond, IN</span>
-        </span>
-      </a>
-
-      <nav aria-label="Primary" class="hidden lg:block">
-        <ul class="flex items-center gap-7 text-sm font-medium text-silver">
-          <li><a class="nav-link" href="#roadside">Roadside</a></li>
-          <li><a class="nav-link" href="#towing">Towing</a></li>
-          <li><a class="nav-link" href="#heavy-duty">Heavy Duty</a></li>
-          <li><a class="nav-link" href="#tires">Tires</a></li>
-          <li><a class="nav-link" href="#repair">Auto Repair</a></li>
-          <li><a class="nav-link" href="#location">Hours &amp; Location</a></li>
-        </ul>
-      </nav>
-
-      <div class="flex items-center gap-2">
-        <a href="tel:2193339293" class="btn btn-emergency header-call" aria-label="Call Roberto 24/7 at (219) 333-9293">
-          <svg aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg>
-          <span>(219) 333-9293</span>
-        </a>
-        <button type="button" id="menu-toggle" class="menu-toggle lg:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
-          <svg class="icon-open h-6 w-6" aria-hidden="true" focusable="false"><use href="#icon-menu"/></svg>
-          <svg class="icon-close h-6 w-6" aria-hidden="true" focusable="false"><use href="#icon-close"/></svg>
-        </button>
+  <!-- ===================== Header: utility bar + nav ===================== -->
+  <header id="site-header" class="site-header sticky top-0 z-50">
+    <div class="utility border-b border-line bg-[#0B0C0E] text-[13px] text-silver">
+      <div class="wrap flex h-9 items-center justify-between gap-4">
+        <p class="flex min-w-0 items-center gap-2">
+          <svg aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=6704+Kennedy+Ave,+Hammond,+IN+46323" target="_blank" rel="noopener" class="truncate hover:text-chrome">6704 Kennedy Ave, Hammond, IN<span class="sr-only"> (directions open in a new tab)</span></a>
+        </p>
+        <p class="hidden items-center gap-2 lg:flex">
+          <svg aria-hidden="true" focusable="false"><use href="#i-clock"/></svg>
+          Shop Bays: Mon–Sat 8AM–8PM, Sun 9AM–5PM
+        </p>
+        <p class="flex shrink-0 items-center gap-2">
+          <span class="dot dot--live !h-2 !w-2" aria-hidden="true"></span>
+          <a href="tel:2193339293" class="font-semibold text-safety-text hover:text-chrome"><span class="hidden sm:inline">24/7 Dispatch: </span>(219) 333-9293</a>
+        </p>
       </div>
     </div>
 
-    <div id="mobile-menu" class="mobile-menu lg:hidden border-t border-steel bg-asphalt" hidden>
-      <nav aria-label="Mobile" class="container-site py-4">
-        <ul class="grid gap-1 text-base font-medium">
-          <li><a class="mobile-link" href="#roadside">24/7 Roadside Assistance</a></li>
-          <li><a class="mobile-link" href="#towing">Towing &amp; Recovery</a></li>
-          <li><a class="mobile-link" href="#heavy-duty">Heavy Duty &amp; Commercial</a></li>
-          <li><a class="mobile-link" href="#tires">Tire Center</a></li>
-          <li><a class="mobile-link" href="#repair">Auto Repair</a></li>
-          <li><a class="mobile-link" href="#location">Hours &amp; Location</a></li>
-        </ul>
-        <a href="tel:2193339293" class="btn btn-emergency mt-4 w-full" aria-label="Call Roberto 24/7 at (219) 333-9293">
-          <svg aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg>
-          <span>Call Roberto 24/7</span>
+    <div class="border-b border-line bg-asphalt">
+      <div class="wrap flex h-[72px] items-center justify-between gap-4 max-md:h-16">
+        <a href="#top" class="flex min-w-0 items-center gap-3" aria-label="NWI Auto Service and Towing, back to top">
+          <svg class="h-9 w-[72px] shrink-0" aria-hidden="true" focusable="false"><use href="#nwi-crest"/></svg>
+          <span class="flex min-w-0 flex-col leading-none">
+            <span class="font-display text-lg font-bold text-chrome sm:text-xl">NWI Auto Service</span>
+            <span class="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">and Towing · Hammond, IN</span>
+          </span>
         </a>
-      </nav>
+
+        <nav aria-label="Primary" class="hidden lg:block">
+          <ul class="flex items-center gap-7 text-sm font-medium">
+            <li><a class="nav-link" href="#roadside">Roadside &amp; Towing</a></li>
+            <li><a class="nav-link" href="#heavy-duty">Heavy Duty</a></li>
+            <li><a class="nav-link" href="#tires">Tires</a></li>
+            <li><a class="nav-link" href="#repair">Repair</a></li>
+            <li><a class="nav-link" href="#location">Hours &amp; Location</a></li>
+          </ul>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <a href="tel:2193339293" class="btn btn-call header-call" aria-label="Call Roberto 24/7 at (219) 333-9293">
+            <svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
+            <span>(219) 333-9293</span>
+          </a>
+          <button type="button" id="menu-toggle" class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+            <svg class="icon-open h-6 w-6" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg>
+            <svg class="icon-close h-6 w-6" aria-hidden="true" focusable="false"><use href="#i-close"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="mobile-menu border-t border-line bg-asphalt lg:hidden" hidden>
+        <nav aria-label="Mobile" class="wrap py-3">
+          <ul class="text-base">
+            <li><a class="mobile-link" href="#roadside">24/7 Roadside &amp; Towing</a></li>
+            <li><a class="mobile-link" href="#heavy-duty">Heavy Duty &amp; Commercial</a></li>
+            <li><a class="mobile-link" href="#tires">Tire Center</a></li>
+            <li><a class="mobile-link" href="#repair">Auto Repair</a></li>
+            <li><a class="mobile-link" href="#location">Hours &amp; Location</a></li>
+            <li><a class="mobile-link" href="#quote">Get an Estimate</a></li>
+          </ul>
+          <a href="tel:2193339293" class="btn btn-call mt-4 w-full" aria-label="Call Roberto 24/7 at (219) 333-9293">
+            <svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
+            <span>Call Roberto 24/7</span>
+          </a>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main id="main" tabindex="-1">
 
     <!-- ===================== Hero ===================== -->
-    <section id="top" class="hero-bg border-b border-steel" aria-labelledby="hero-heading">
-      <div class="container-site grid items-center gap-10 py-12 md:py-20 lg:grid-cols-12 lg:gap-12 lg:py-24">
+    <section id="top" class="relative isolate overflow-hidden border-b border-line" aria-labelledby="hero-heading">
+      <img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&amp;fit=crop&amp;w=1600&amp;q=80"
+           alt="" class="absolute inset-0 -z-20 h-full w-full object-cover object-[70%_center]"
+           width="1600" height="1067" fetchpriority="high" decoding="async">
+      <div class="hero-overlay absolute inset-0 -z-10" aria-hidden="true"></div>
 
-        <div class="lg:col-span-7">
-          <p class="pill-emergency">24/7 Emergency Dispatch Line Open</p>
+      <div class="wrap py-14 md:py-20 lg:py-28">
+        <div class="max-w-2xl">
+          <p class="tag-live">24/7 Towing &amp; Roadside · Dispatch Open</p>
 
-          <h1 id="hero-heading" class="mt-5 text-4xl text-chrome sm:text-5xl lg:text-6xl">
-            Towing &amp; Honest Auto Repair in
-            <span class="text-silver">Hammond, Indiana</span>
+          <h1 id="hero-heading" class="mt-6 text-[2.5rem] sm:text-5xl lg:text-[4rem]">
+            Towing &amp; Auto Repair<br class="hidden sm:inline"> in Hammond, Indiana
           </h1>
 
-          <p class="mt-5 max-w-2xl text-base text-silver sm:text-lg">
-            Broken down on I-80/94, stuck on Cline Ave, or need a mechanic you can trust on Kennedy Ave?
-            Call Roberto directly for fast roadside help, heavy-duty towing, and straight-talk diagnostics,
-            all at the best prices in Northwest Indiana.
+          <p class="mt-5 font-display text-xl font-medium text-silver sm:text-2xl">
+            Fast dispatch. Honest mechanic work. Best prices in town.
+          </p>
+          <p class="mt-4 text-base text-silver sm:text-lg">
+            Broke down on I-80/94 or Cline Ave? Call Roberto and a truck is on the way.
+            Need brakes, tires, or a check-engine light looked at? Pull into the shop on Kennedy Ave.
           </p>
 
-          <div class="mt-8 grid gap-4 sm:grid-cols-2">
-            <div class="intent-card intent-card--emergency">
-              <p class="eyebrow !text-[#FF8A93]">Need help right now?</p>
-              <a href="tel:2193339293" class="btn btn-emergency btn-lg mt-3 w-full" aria-label="Call Roberto for 24/7 dispatch at (219) 333-9293">
-                <svg aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg>
-                <span>Call Roberto Now</span>
-              </a>
-              <p class="mt-3 text-sm text-silver">
-                <span class="font-semibold text-chrome">(219) 333-9293</span> · Towing &amp; roadside, 24 hours a day, 7 days a week
-              </p>
-            </div>
-
-            <div class="intent-card">
-              <p class="eyebrow">Bringing it to the shop?</p>
-              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=6704+Kennedy+Ave,+Hammond,+IN+46323" target="_blank" rel="noopener" class="btn btn-steel btn-lg mt-3 w-full">
-                <svg aria-hidden="true" focusable="false"><use href="#icon-directions"/></svg>
-                <span>Get Directions</span>
-                <span class="sr-only">(opens Google Maps in a new tab)</span>
-              </a>
-              <p class="mt-3 text-sm text-silver">
-                <span class="font-semibold text-chrome">6704 Kennedy Ave</span> · Mon–Sat 8 AM–8 PM, Sun 9 AM–5 PM
-              </p>
-            </div>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="tel:2193339293" class="btn btn-call btn-lg" aria-label="Call Roberto for 24/7 dispatch at (219) 333-9293">
+              <svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
+              <span>Call Roberto 24/7</span>
+            </a>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=6704+Kennedy+Ave,+Hammond,+IN+46323" target="_blank" rel="noopener" class="btn btn-outline btn-lg">
+              <svg aria-hidden="true" focusable="false"><use href="#i-directions"/></svg>
+              <span>Directions to Shop</span>
+              <span class="sr-only">(opens Google Maps in a new tab)</span>
+            </a>
           </div>
 
-          <ul class="mt-8 grid grid-cols-2 gap-x-6 gap-y-3 text-sm text-chrome sm:grid-cols-4" aria-label="What we handle">
-            <li class="flex items-center gap-2"><svg class="h-4 w-4 shrink-0 text-silver" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>Cars, SUVs &amp; Pickups</li>
-            <li class="flex items-center gap-2"><svg class="h-4 w-4 shrink-0 text-silver" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>Semis &amp; Heavy Equipment</li>
-            <li class="flex items-center gap-2"><svg class="h-4 w-4 shrink-0 text-silver" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>New &amp; Used Tires</li>
-            <li class="flex items-center gap-2"><svg class="h-4 w-4 shrink-0 text-silver" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>Best Prices Guaranteed</li>
-          </ul>
+          <dl class="mt-8 grid gap-x-8 gap-y-3 border-t border-line pt-6 text-sm sm:grid-cols-2">
+            <div>
+              <dt class="font-display text-xs font-semibold tracking-[0.14em] text-muted">Towing &amp; Roadside</dt>
+              <dd class="mt-1 font-semibold text-safety-text">Available 24 hours · 7 days</dd>
+            </div>
+            <div>
+              <dt class="font-display text-xs font-semibold tracking-[0.14em] text-muted">Shop Bays · 6704 Kennedy Ave</dt>
+              <dd class="mt-1 text-silver" data-shop-status aria-live="polite">Mon–Sat 8 AM–8 PM · Sun 9 AM–5 PM</dd>
+            </div>
+          </dl>
         </div>
-
-        <aside class="lg:col-span-5" aria-label="Dispatch and shop status">
-          <div class="surface-card shadow-plate overflow-hidden">
-            <div class="crest-stage flex justify-center border-b border-steel px-6 py-8">
-              <svg class="h-28 w-56 sm:h-32 sm:w-64" role="img" aria-label="NWI Auto Service and Towing winged crest"><use href="#nwi-crest"/></svg>
-            </div>
-
-            <dl class="divide-y divide-steel">
-              <div class="flex items-start gap-4 px-6 py-5">
-                <svg class="mt-0.5 h-6 w-6 shrink-0 text-alert" aria-hidden="true" focusable="false"><use href="#icon-truck"/></svg>
-                <div>
-                  <dt class="font-display text-lg uppercase tracking-wide text-chrome">Towing &amp; Roadside</dt>
-                  <dd class="mt-1 text-sm text-silver"><span class="font-semibold text-[#FF8A93]">Available now</span> · 24 hours, 7 days a week</dd>
-                </div>
-              </div>
-              <div class="flex items-start gap-4 px-6 py-5">
-                <svg class="mt-0.5 h-6 w-6 shrink-0 text-silver" aria-hidden="true" focusable="false"><use href="#icon-wrench"/></svg>
-                <div>
-                  <dt class="font-display text-lg uppercase tracking-wide text-chrome">Shop &amp; Diagnostic Bays</dt>
-                  <dd class="mt-1 text-sm text-silver" data-shop-status aria-live="polite">Mon–Sat 8 AM–8 PM · Sun 9 AM–5 PM</dd>
-                </div>
-              </div>
-              <div class="flex items-start gap-4 px-6 py-5">
-                <svg class="mt-0.5 h-6 w-6 shrink-0 text-silver" aria-hidden="true" focusable="false"><use href="#icon-map-pin"/></svg>
-                <div>
-                  <dt class="font-display text-lg uppercase tracking-wide text-chrome">Shop Location</dt>
-                  <dd class="mt-1 text-sm text-silver">6704 Kennedy Ave, Hammond, IN 46323</dd>
-                </div>
-              </div>
-            </dl>
-          </div>
-        </aside>
-
       </div>
     </section>
 
-    <!-- ===================== 24/7 Roadside Assistance ===================== -->
+    <!-- ===================== Trust badges ===================== -->
+    <section class="border-b border-line bg-panel" aria-label="Why drivers call us">
+      <ul class="wrap grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- VERIFY with owner before launch: motor carrier licensing & insurance -->
+        <li class="flex items-start gap-3 border-line py-5 sm:pr-6 lg:border-r">
+          <svg class="mt-0.5 h-6 w-6 shrink-0 text-silver" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>
+          <p class="text-sm font-semibold leading-snug text-chrome">Licensed &amp; Insured Indiana Motor Carrier</p>
+        </li>
+        <li class="flex items-start gap-3 border-t border-line py-5 sm:border-t-0 sm:pl-6 lg:border-r lg:pr-6">
+          <svg class="mt-0.5 h-6 w-6 shrink-0 text-silver" aria-hidden="true" focusable="false"><use href="#i-tire"/></svg>
+          <p class="text-sm font-semibold leading-snug text-chrome">Walk-Ins Welcome for Tires &amp; Brakes</p>
+        </li>
+        <li class="flex items-start gap-3 border-t border-line py-5 sm:pr-6 lg:border-r lg:border-t-0 lg:pl-6">
+          <svg class="mt-0.5 h-6 w-6 shrink-0 text-silver" aria-hidden="true" focusable="false"><use href="#i-user"/></svg>
+          <p class="text-sm font-semibold leading-snug text-chrome">Speak Directly with Roberto. No Call Center Queues.</p>
+        </li>
+        <li class="flex items-start gap-3 border-t border-line py-5 sm:pl-6 lg:border-t-0">
+          <svg class="mt-0.5 h-6 w-6 shrink-0 text-silver" aria-hidden="true" focusable="false"><use href="#i-tag"/></svg>
+          <p class="text-sm font-semibold leading-snug text-chrome">Best Price Guarantee on Tires &amp; Labor</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===================== Roadside & Towing: dispatch board ===================== -->
     <section id="roadside" class="section" aria-labelledby="roadside-heading">
-      <div class="container-site">
-        <div class="section-head">
-          <p class="pill-emergency">24/7 Roadside Assistance</p>
-          <h2 id="roadside-heading" class="section-title">Stranded? We Come to You.</h2>
-          <p class="section-lede">
-            Dead battery in a Hammond parking lot, flat tire on the shoulder of I-80/94, or keys locked inside at 2 AM:
-            call Roberto and a service truck heads your way. No call centers, no runaround.
-          </p>
-        </div>
+      <div class="wrap">
+        <p class="label">24/7 Roadside &amp; Towing</p>
+        <h2 id="roadside-heading" class="section-title">Stuck? One Call Gets a Truck Rolling.</h2>
+        <p class="section-lede">
+          Flat on the shoulder, dead battery in a lot, keys locked in, out of gas, or in the ditch:
+          it's all on the board, day or night. You call, Roberto answers, and a truck heads your way.
+        </p>
 
-        <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <li class="service-card">
-            <span class="icon-badge icon-badge--alert"><svg aria-hidden="true" focusable="false"><use href="#icon-tire"/></svg></span>
-            <h3 class="service-card__title">Flat Tire &amp; Puncture Fixes</h3>
-            <p class="service-card__body">We swap on your spare or plug and patch the puncture roadside so you can drive safely to the shop.</p>
-            <ul class="check-list">
-              <li>Spare tire installs</li>
-              <li>Plug &amp; patch repairs</li>
-              <li>Tow in if the tire can't be saved</li>
-            </ul>
-          </li>
-          <li class="service-card">
-            <span class="icon-badge icon-badge--alert"><svg aria-hidden="true" focusable="false"><use href="#icon-battery"/></svg></span>
-            <h3 class="service-card__title">Jump-Starts</h3>
-            <p class="service-card__body">Dead battery from the cold or a dome light left on? We jump it and check whether the battery or alternator is the real problem.</p>
-            <ul class="check-list">
-              <li>Cars, pickups &amp; work trucks</li>
-              <li>Quick charging-system check</li>
-              <li>Battery replacement at the shop</li>
-            </ul>
-          </li>
-          <li class="service-card">
-            <span class="icon-badge icon-badge--alert"><svg aria-hidden="true" focusable="false"><use href="#icon-key"/></svg></span>
-            <h3 class="service-card__title">Vehicle Lockouts</h3>
-            <p class="service-card__body">Keys locked in the car? We open most vehicles with proper lockout tools, without damaging your door, glass, or weatherstripping.</p>
-            <ul class="check-list">
-              <li>Damage-free entry</li>
-              <li>Keys locked in trunk or cab</li>
-              <li>Day or night response</li>
-            </ul>
-          </li>
-          <li class="service-card">
-            <span class="icon-badge icon-badge--alert"><svg aria-hidden="true" focusable="false"><use href="#icon-fuel"/></svg></span>
-            <h3 class="service-card__title">Emergency Fuel Delivery</h3>
-            <p class="service-card__body">Ran out of gas before the next exit? We bring enough fuel to get you moving to the nearest station.</p>
-            <ul class="check-list">
-              <li>Gasoline &amp; diesel</li>
-              <li>Highway shoulders &amp; side streets</li>
-              <li>Commercial vehicles welcome</li>
-            </ul>
-          </li>
-        </ul>
+        <div class="mt-10 grid gap-6 lg:grid-cols-12">
+          <figure class="relative overflow-hidden rounded border border-line bg-panel lg:col-span-5 lg:min-h-[520px]">
+            <img src="https://images.unsplash.com/photo-1730514784243-f0e7f09c9f50?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                 alt="Flatbed tow truck carrying an SUV while towing a damaged sedan behind it"
+                 class="h-56 w-full object-cover sm:h-80 lg:absolute lg:inset-0 lg:h-full" width="800" height="533" loading="lazy" decoding="async">
+            <div class="absolute inset-0 hidden bg-gradient-to-t from-[#101214] via-[#101214]/30 to-transparent lg:block" aria-hidden="true"></div>
+            <figcaption class="p-5 sm:p-6 lg:absolute lg:inset-x-0 lg:bottom-0">
+              <div class="flex flex-wrap gap-2">
+                <span class="tag-live">On Call Now</span>
+                <span class="inline-flex items-center rounded-sm border border-line bg-asphalt px-2.5 py-1 font-display text-[13px] font-semibold tracking-[0.1em] text-chrome">24 HRS · 7 DAYS</span>
+              </div>
+              <p class="mt-3 font-display text-2xl font-semibold text-chrome">Flatbed, wheel-lift &amp; winch-out recovery</p>
+              <p class="mt-1 text-sm text-silver">Cars, SUVs, pickups, and motorcycles across Hammond and Northwest Indiana.</p>
+            </figcaption>
+          </figure>
 
-        <div class="cta-strip">
-          <div>
-            <p class="font-display text-xl uppercase tracking-wide text-chrome sm:text-2xl">Stuck on the side of the road right now?</p>
-            <p class="mt-1 text-sm text-silver">Roberto answers the dispatch line himself, 24 hours a day, 7 days a week.</p>
-          </div>
-          <a href="tel:2193339293" class="btn btn-emergency btn-lg shrink-0" aria-label="Call Roberto for roadside assistance at (219) 333-9293">
-            <svg aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg>
-            <span>(219) 333-9293</span>
-          </a>
-        </div>
-      </div>
-    </section>
+          <div class="board lg:col-span-7">
+            <div class="board-head">
+              <p class="flex items-center gap-3 font-display text-lg font-semibold tracking-[0.08em] text-chrome">
+                <span class="dot dot--live" aria-hidden="true"></span>
+                Dispatch Board
+              </p>
+              <p class="font-display text-sm font-semibold tracking-[0.1em] text-safety-text">Line open · (219) 333-9293</p>
+            </div>
 
-    <!-- ===================== Towing & Recovery ===================== -->
-    <section id="towing" class="section section--raised" aria-labelledby="towing-heading">
-      <div class="container-site">
-        <div class="section-head">
-          <p class="eyebrow">Towing &amp; Recovery</p>
-          <h2 id="towing-heading" class="section-title">The Right Truck for Every Tow</h2>
-          <p class="section-lede">
-            Every vehicle moves differently. We match the equipment to the job, whether that's a low sports car,
-            an all-wheel-drive SUV, or a pickup buried in a ditch off Cline Ave.
-          </p>
-        </div>
-
-        <ul class="grid gap-4 lg:grid-cols-3">
-          <li class="service-card">
-            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="#icon-flatbed"/></svg></span>
-            <h3 class="service-card__title">Flatbed Towing</h3>
-            <p class="service-card__body">The whole vehicle rides on the bed with no wheels on the pavement. It's the safest way to move AWD and 4x4 vehicles, low-clearance cars, and anything that won't roll.</p>
-            <p class="best-for"><span>Best for</span> AWD &amp; 4x4 · luxury &amp; lowered cars · non-running vehicles</p>
-          </li>
-          <li class="service-card">
-            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="#icon-truck"/></svg></span>
-            <h3 class="service-card__title">Wheel-Lift Towing</h3>
-            <p class="service-card__body">Fast, compact, and ideal for tight spots like parking garages, alleys, and crowded lots where a flatbed can't maneuver.</p>
-            <p class="best-for"><span>Best for</span> Front- or rear-wheel-drive cars · tight access · short local tows</p>
-          </li>
-          <li class="service-card">
-            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="#icon-hook"/></svg></span>
-            <h3 class="service-card__title">Winch-Out &amp; Recovery</h3>
-            <p class="service-card__body">Slid into a ditch, stuck in snow or mud, or off the pavement after a spin-out? We winch you back onto solid ground carefully, and tow you in only if it's needed.</p>
-            <p class="best-for"><span>Best for</span> Ditches &amp; embankments · snow &amp; mud · off-road recovery</p>
-          </li>
-        </ul>
-
-        <div class="mt-10 grid gap-4 md:grid-cols-2">
-          <div class="surface-card p-6">
-            <h3 class="font-display text-lg uppercase tracking-wide text-chrome">Where we tow</h3>
-            <ul class="check-list mt-3">
-              <li>Breakdown tows to our Kennedy Ave shop or the mechanic you choose</li>
-              <li>Accident and collision tows to body shops or storage</li>
-              <li>Vehicle transport for sales, purchases, and moves</li>
-              <li>Local and regional runs across Northwest Indiana and the Chicago Southland</li>
+            <h3 class="board-group">Roadside Assistance</h3>
+            <ul>
+              <li class="board-row">
+                <span class="dot" aria-hidden="true"></span>
+                <p class="board-name">Flat Tire &amp; Puncture</p>
+                <p class="board-desc">Spare put on, or the puncture plugged and patched so you can drive to the shop.</p>
+                <p class="board-status">Available 24/7</p>
+              </li>
+              <li class="board-row">
+                <span class="dot" aria-hidden="true"></span>
+                <p class="board-name">Jump-Start</p>
+                <p class="board-desc">Dead battery jumped, plus a quick check of whether it's the battery or the alternator.</p>
+                <p class="board-status">Available 24/7</p>
+              </li>
+              <li class="board-row">
+                <span class="dot" aria-hidden="true"></span>
+                <p class="board-name">Lockout</p>
+                <p class="board-desc">Keys locked in the cab or trunk. We open it without damaging the door or glass.</p>
+                <p class="board-status">Available 24/7</p>
+              </li>
+              <li class="board-row">
+                <span class="dot" aria-hidden="true"></span>
+                <p class="board-name">Fuel Delivery</p>
+                <p class="board-desc">Gas or diesel, enough to get you to the nearest station.</p>
+                <p class="board-status">Available 24/7</p>
+              </li>
             </ul>
-          </div>
-          <div class="surface-card p-6">
-            <h3 class="font-display text-lg uppercase tracking-wide text-chrome">What we handle</h3>
-            <ul class="check-list mt-3">
-              <li>Cars, minivans, and crossovers</li>
-              <li>SUVs and light pickups</li>
-              <li>Motorcycles on the flatbed</li>
-              <li>Work vans and box trucks (see Heavy Duty below)</li>
+
+            <h3 id="towing" class="board-group">Towing &amp; Recovery</h3>
+            <ul>
+              <li class="board-row">
+                <span class="dot" aria-hidden="true"></span>
+                <p class="board-name">Flatbed Towing</p>
+                <p class="board-desc">No wheels on the road. Right for AWD, 4x4, lowered cars, and anything that won't roll.</p>
+                <p class="board-status">Available 24/7</p>
+              </li>
+              <li class="board-row">
+                <span class="dot" aria-hidden="true"></span>
+                <p class="board-name">Wheel-Lift Towing</p>
+                <p class="board-desc">Quick hookup for tight spots: parking garages, alleys, and packed lots.</p>
+                <p class="board-status">Available 24/7</p>
+              </li>
+              <li class="board-row">
+                <span class="dot" aria-hidden="true"></span>
+                <p class="board-name">Winch-Out &amp; Recovery</p>
+                <p class="board-desc">Ditches, embankments, snow, and mud. We pull you out and only tow if it's needed.</p>
+                <p class="board-status">Available 24/7</p>
+              </li>
             </ul>
+
+            <div class="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
+              <p class="text-sm text-silver">Tell us where you are and what happened. You'll get a straight answer on timing and price.</p>
+              <a href="tel:2193339293" class="btn btn-call shrink-0" aria-label="Call dispatch at (219) 333-9293">
+                <svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
+                <span>Call Dispatch</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== Commercial & Heavy Equipment ===================== -->
-    <section id="heavy-duty" class="section section--heavy" aria-labelledby="heavy-heading">
-      <div class="container-site grid gap-10 lg:grid-cols-12">
-        <div class="lg:col-span-7">
-          <p class="eyebrow">Commercial &amp; Heavy Duty</p>
+    <!-- ===================== Heavy duty: split ===================== -->
+    <section id="heavy-duty" class="border-b border-line bg-panel" aria-labelledby="heavy-heading">
+      <div class="grid lg:grid-cols-2">
+        <div class="relative min-h-[280px] sm:min-h-[380px] lg:min-h-full">
+          <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+               alt="Semi-truck with a box trailer driving down a two-lane highway"
+               class="absolute inset-0 h-full w-full object-cover object-[32%_center] brightness-[.8] saturate-[.75]" width="1200" height="800" loading="lazy" decoding="async">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#101214]/80 via-[#101214]/20 to-[#101214]/30" aria-hidden="true"></div>
+          <p class="absolute bottom-0 left-0 m-4 rounded-sm border border-line bg-asphalt px-3 py-1.5 font-display text-sm font-semibold tracking-[0.1em] text-chrome sm:m-6">
+            Semis · Box Trucks · RVs · Equipment
+          </p>
+        </div>
+
+        <div class="px-4 py-14 sm:px-8 md:py-20 lg:px-14 xl:pr-[max(3.5rem,calc((100vw-1200px)/2+32px))]">
+          <p class="label">Commercial &amp; Heavy Duty</p>
           <h2 id="heavy-heading" class="section-title">Heavy Towing for Trucks, Fleets &amp; Equipment</h2>
           <p class="section-lede">
-            Hammond sits at the crossroads of I-80/94, the Cline Ave industrial corridor, and some of the busiest
-            freight routes in the Midwest. When a rig, a box truck, or a piece of equipment goes down, every hour costs
-            you money. We're built to get it moving again.
+            Between I-80/94, the Cline Ave industrial corridor, and the rail yards, Hammond moves a lot of freight.
+            When a rig or a machine goes down, every hour costs you. We get it moving.
           </p>
 
-          <ul class="mt-8 grid gap-4 sm:grid-cols-2">
-            <li class="heavy-item">
-              <svg aria-hidden="true" focusable="false"><use href="#icon-truck"/></svg>
-              <div>
-                <h3>Semi-Trucks &amp; Tractors</h3>
-                <p>Tractor and trailer towing, breakdown recovery, and roadside help for over-the-road drivers.</p>
-              </div>
-            </li>
-            <li class="heavy-item">
-              <svg aria-hidden="true" focusable="false"><use href="#icon-flatbed"/></svg>
-              <div>
-                <h3>Box Trucks &amp; Work Vans</h3>
-                <p>Delivery trucks, step vans, and cargo vans towed to our bay or your fleet yard.</p>
-              </div>
-            </li>
-            <li class="heavy-item">
-              <svg aria-hidden="true" focusable="false"><use href="#icon-rv"/></svg>
-              <div>
-                <h3>RVs &amp; Motorhomes</h3>
-                <p>Careful towing for motorhomes and campers, whether it's a breakdown on the road or a move to service.</p>
-              </div>
-            </li>
-            <li class="heavy-item">
-              <svg aria-hidden="true" focusable="false"><use href="#icon-fleet"/></svg>
-              <div>
-                <h3>Commercial Fleets</h3>
-                <p>One number for your whole fleet: towing, tire service, and repairs, with straightforward billing.</p>
-              </div>
-            </li>
-            <li class="heavy-item sm:col-span-2">
-              <svg aria-hidden="true" focusable="false"><use href="#icon-hardhat"/></svg>
-              <div>
-                <h3>Heavy Equipment Transport</h3>
-                <p>Hauling for skid steers, forklifts, compact excavators, and other job-site machinery between yards, job sites, and repair shops.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
+          <dl class="mt-8 divide-y divide-line border-y border-line">
+            <div class="grid gap-1 py-4 sm:grid-cols-[180px_1fr] sm:gap-6">
+              <dt class="font-display text-base font-semibold tracking-[0.06em] text-chrome">Semi-Trucks</dt>
+              <dd class="text-[15px] text-muted">Tractor and trailer towing, breakdown recovery, and roadside help for over-the-road drivers.</dd>
+            </div>
+            <div class="grid gap-1 py-4 sm:grid-cols-[180px_1fr] sm:gap-6">
+              <dt class="font-display text-base font-semibold tracking-[0.06em] text-chrome">Box Trucks &amp; Vans</dt>
+              <dd class="text-[15px] text-muted">Delivery trucks, step vans, and cargo vans towed to our bay or your yard.</dd>
+            </div>
+            <div class="grid gap-1 py-4 sm:grid-cols-[180px_1fr] sm:gap-6">
+              <dt class="font-display text-base font-semibold tracking-[0.06em] text-chrome">RVs &amp; Motorhomes</dt>
+              <dd class="text-[15px] text-muted">Careful towing for motorhomes and campers, off the highway or to service.</dd>
+            </div>
+            <div class="grid gap-1 py-4 sm:grid-cols-[180px_1fr] sm:gap-6">
+              <dt class="font-display text-base font-semibold tracking-[0.06em] text-chrome">Commercial Fleets</dt>
+              <dd class="text-[15px] text-muted">One number for towing, truck tires, and repairs across your whole fleet.</dd>
+            </div>
+            <div class="grid gap-1 py-4 sm:grid-cols-[180px_1fr] sm:gap-6">
+              <dt class="font-display text-base font-semibold tracking-[0.06em] text-chrome">Equipment Hauling</dt>
+              <dd class="text-[15px] text-muted">Skid steers, forklifts, compact excavators, and other industrial machinery moved between yards, job sites, and shops.</dd>
+            </div>
+          </dl>
 
-        <aside class="lg:col-span-5" aria-labelledby="fleet-heading">
-          <div class="surface-card shadow-plate p-6 sm:p-8 lg:sticky lg:top-24">
-            <p class="pill-emergency">Commercial dispatch · 24/7</p>
-            <h3 id="fleet-heading" class="mt-4 font-display text-2xl uppercase tracking-wide text-chrome">Truck down? Talk to Roberto.</h3>
-            <p class="mt-3 text-silver">
-              Fleet managers and owner-operators get the owner on the phone, not a call center. Tell us the unit, the location, and the problem, and we'll give you a straight answer on timing and cost.
-            </p>
-            <ul class="check-list mt-5">
-              <li>Nights, weekends, and holidays</li>
-              <li>Heavy truck tires sold and serviced</li>
-              <li>Tow to our bay, your yard, or your dealer</li>
-              <li>Honest quotes before the hook goes on</li>
-            </ul>
-            <a href="tel:2193339293" class="btn btn-emergency btn-lg mt-6 w-full" aria-label="Call Roberto for commercial or heavy towing at (219) 333-9293">
-              <svg aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg>
-              <span>Call (219) 333-9293</span>
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <a href="tel:2193339293" class="btn btn-call btn-lg" aria-label="Call Roberto for commercial or heavy towing at (219) 333-9293">
+              <svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
+              <span>Truck Down? Call Now</span>
             </a>
+            <p class="text-sm text-muted">Nights, weekends, and holidays. Quote before the hook goes on.</p>
           </div>
-        </aside>
+        </div>
       </div>
     </section>
 
-    <!-- ===================== Tire Center ===================== -->
-    <section id="tires" class="section section--raised" aria-labelledby="tires-heading">
-      <div class="container-site">
-        <div class="section-head">
-          <p class="eyebrow">Tire Center</p>
-          <h2 id="tires-heading" class="section-title">New &amp; Used Tires, from Sedans to Semis</h2>
-          <p class="section-lede">
-            Whether you need one budget-friendly used tire to get to payday or a full set of new ones for winter,
-            we'll find the right fit at a fair price and mount it while you wait.
-          </p>
+    <!-- ===================== Tire center: spec catalog ===================== -->
+    <section id="tires" class="section" aria-labelledby="tires-heading">
+      <div class="wrap">
+        <div class="grid gap-6 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-7">
+            <p class="label">Tire Center</p>
+            <h2 id="tires-heading" class="section-title">New, Used &amp; Truck Tires</h2>
+            <p class="section-lede">
+              One used tire to get you to payday, or a full set of new ones before winter. We'll show you both
+              options, give you the price up front, and mount them while you wait.
+            </p>
+          </div>
+          <p class="text-sm text-muted lg:col-span-5 lg:text-right">Walk-ins welcome during shop hours. Call ahead for a specific size.</p>
         </div>
 
-        <div class="grid gap-6 lg:grid-cols-2">
-          <article class="tire-panel" aria-labelledby="tires-car-heading">
-            <div class="flex items-center gap-4">
-              <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="#icon-tire"/></svg></span>
-              <div>
-                <p class="eyebrow">Cars · SUVs · Light Pickups</p>
-                <h3 id="tires-car-heading" class="mt-1 text-2xl text-chrome">New &amp; Used Tires</h3>
-              </div>
+        <div class="panel mt-10 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+               alt="Stacks of new and used tires"
+               class="panel-img !h-48 sm:!h-56" width="800" height="533" loading="lazy" decoding="async">
+
+          <div class="grid lg:grid-cols-2">
+            <div class="p-6 sm:p-8 lg:border-r lg:border-line">
+              <table class="spec">
+                <caption class="pb-4">
+                  <span class="block font-display text-xs font-semibold tracking-[0.16em] text-muted">Catalog A</span>
+                  <span class="mt-1 block font-display text-2xl font-bold text-chrome">Passenger: New &amp; Used</span>
+                </caption>
+                <tbody>
+                  <tr><th scope="row">Vehicles</th><td>Cars, SUVs, minivans, light pickups</td></tr>
+                  <tr><th scope="row">Stock</th><td>New all-season &amp; winter tires; inspected used tires with safe tread</td></tr>
+                  <tr><th scope="row">Service</th><td>Mount &amp; balance, rotation, flat repair, valve stems, TPMS checks</td></tr>
+                  <tr><th scope="row">Walk-ins</th><td>Welcome Mon–Sat 8 AM–8 PM, Sun 9 AM–5 PM</td></tr>
+                </tbody>
+              </table>
             </div>
-            <p class="mt-5 text-silver">
-              Quality used tires with plenty of safe tread left, and new tires across all-season, winter, and
-              all-terrain options. We'll show you both and let you choose what fits your budget.
-            </p>
-            <ul class="check-list check-list--cols mt-6">
-              <li>Inspected used tires</li>
-              <li>New all-season &amp; winter</li>
-              <li>Mounting &amp; balancing</li>
-              <li>Flat repair &amp; patching</li>
-              <li>Tire rotation</li>
-              <li>Valve stems &amp; TPMS checks</li>
-            </ul>
+            <div class="border-t border-line p-6 sm:p-8 lg:border-t-0">
+              <table class="spec">
+                <caption class="pb-4">
+                  <span class="block font-display text-xs font-semibold tracking-[0.16em] text-muted">Catalog B</span>
+                  <span class="mt-1 block font-display text-2xl font-bold text-chrome">Commercial Truck Tires</span>
+                </caption>
+                <tbody>
+                  <tr><th scope="row">Vehicles</th><td>Semis, box trucks, work vans, fleet units</td></tr>
+                  <tr><th scope="row">Positions</th><td>Steer, drive &amp; trailer</td></tr>
+                  <tr><th scope="row">Service</th><td>Commercial mounting, heavy truck flat repair, fleet replacement</td></tr>
+                  <tr><th scope="row">Blowouts</th><td>Tow-in available 24/7: <a href="tel:2193339293" class="font-semibold text-safety-text underline underline-offset-2">(219) 333-9293</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Auto repair bay ===================== -->
+    <section id="repair" class="section bg-panel" aria-labelledby="repair-heading">
+      <div class="wrap">
+        <p class="label">Auto Repair Bay</p>
+        <h2 id="repair-heading" class="section-title">Honest Diagnostics. Real Repairs.</h2>
+        <p class="section-lede">
+          We tell you what's wrong, what can wait, and what it costs before we start. No work without your OK.
+        </p>
+
+        <div class="mt-10 grid gap-6 lg:grid-cols-2">
+          <article class="overflow-hidden rounded border border-line bg-asphalt" aria-labelledby="brakes-heading">
+            <img src="https://images.unsplash.com/photo-1613214150384-14921ff659b2?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                 alt="Worn brake rotor and caliper on a vehicle lifted in a garage"
+                 class="panel-img" width="800" height="533" loading="lazy" decoding="async">
+            <div class="p-6 sm:p-8">
+              <h3 id="brakes-heading" class="text-2xl">Brakes &amp; Suspension</h3>
+              <p class="mt-2 text-muted">Squealing, grinding, pulling, or bottoming out on Hammond potholes? Bring it in.</p>
+              <ul class="checks checks--2 mt-5">
+                <li>Pads, rotors &amp; calipers</li>
+                <li>Brake lines &amp; fluid</li>
+                <li>Shocks &amp; struts</li>
+                <li>Springs &amp; control arms</li>
+                <li>Ball joints &amp; tie rods</li>
+                <li>Walk-ins welcome</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="tire-panel tire-panel--heavy" aria-labelledby="tires-truck-heading">
-            <div class="flex items-center gap-4">
-              <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="#icon-truck"/></svg></span>
-              <div>
-                <p class="eyebrow">Commercial &amp; Work Vehicles</p>
-                <h3 id="tires-truck-heading" class="mt-1 text-2xl text-chrome">Truck Tires</h3>
-              </div>
+          <article class="overflow-hidden rounded border border-line bg-asphalt" aria-labelledby="engine-heading">
+            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                 alt="Mechanic's hands working on an engine with a wrench"
+                 class="panel-img" width="800" height="533" loading="lazy" decoding="async">
+            <div class="p-6 sm:p-8">
+              <h3 id="engine-heading" class="text-2xl">Engine Tune-Ups &amp; Diagnostics</h3>
+              <p class="mt-2 text-muted">Rough idle, hard starts, check-engine light? We find the real cause instead of throwing parts at it.</p>
+              <ul class="checks checks--2 mt-5">
+                <li>Check-engine light scans</li>
+                <li>Spark plugs &amp; ignition coils</li>
+                <li>Air &amp; fuel filters</li>
+                <li>Belts &amp; hoses</li>
+                <li>Electrical &amp; battery testing</li>
+                <li>No-start &amp; stalling</li>
+              </ul>
             </div>
-            <p class="mt-5 text-silver">
-              Heavy truck tires for semis, box trucks, and fleet vehicles. When a work truck is off the road,
-              you're losing money, so we move fast to get the right tire mounted and your unit rolling again.
-            </p>
-            <ul class="check-list check-list--cols mt-6">
-              <li>Steer, drive &amp; trailer tires</li>
-              <li>Box truck &amp; work van tires</li>
-              <li>Commercial tire mounting</li>
-              <li>Heavy truck flat repair</li>
-              <li>Fleet tire replacement</li>
-              <li>Tow-in when a tire blows</li>
-            </ul>
           </article>
         </div>
 
-        <div class="mt-6 flex flex-col items-start gap-4 surface-card p-6 sm:flex-row sm:items-center sm:justify-between">
-          <p class="text-silver">
-            <span class="font-semibold text-chrome">Looking for a specific size?</span>
-            Call ahead and we'll check what's in stock before you drive over.
+        <article class="mt-6 grid gap-6 rounded border border-line bg-asphalt p-6 sm:p-8 lg:grid-cols-12 lg:items-center" aria-labelledby="emissions-heading">
+          <div class="lg:col-span-5">
+            <h3 id="emissions-heading" class="text-2xl">Emissions Testing &amp; Repair</h3>
+            <p class="mt-2 text-muted">Lake County requires emissions checks. We find what's keeping your vehicle from passing and fix it, so you pass the first time.</p>
+          </div>
+          <ul class="checks checks--2 lg:col-span-7">
+            <li>Pre-test emissions check</li>
+            <li>Failed-test diagnosis</li>
+            <li>O2 sensors &amp; EVAP leaks</li>
+            <li>Catalytic converter service</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== Best price guarantee ===================== -->
+    <section class="border-b border-line bg-panel2" aria-labelledby="price-heading">
+      <div class="wrap grid gap-8 py-14 md:py-16 lg:grid-cols-12 lg:items-center">
+        <div class="lg:col-span-7">
+          <p class="label">Price Guarantee</p>
+          <h2 id="price-heading" class="mt-3 text-3xl sm:text-4xl lg:text-5xl">Best Prices in Town on Tires &amp; Labor</h2>
+          <p class="mt-4 max-w-2xl text-silver sm:text-lg">
+            You get the price from the person doing the work, before the work starts. No inflated shop rates,
+            no upsells, no surprises on the invoice.
           </p>
-          <a href="tel:2193339293" class="btn btn-steel shrink-0" aria-label="Call to check tire sizes and pricing at (219) 333-9293">
-            <svg aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg>
-            <span>Check Sizes &amp; Pricing</span>
+        </div>
+        <div class="grid gap-3 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1">
+          <a href="#quote" class="btn btn-solid btn-lg">
+            <span>Get an Estimate</span>
+            <svg aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+          </a>
+          <a href="tel:2193339293" class="btn btn-outline btn-lg" aria-label="Call for a price quote at (219) 333-9293">
+            <svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
+            <span>Call for a Price</span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- ===================== Auto Repair Bay ===================== -->
-    <section id="repair" class="section" aria-labelledby="repair-heading">
-      <div class="container-site">
-        <div class="section-head">
-          <p class="eyebrow">Full-Service Auto Repair Bay</p>
-          <h2 id="repair-heading" class="section-title">Honest Diagnostics. Real Repairs.</h2>
-          <p class="section-lede">
-            We tell you what's actually wrong, what can wait, and what it'll cost, before any work starts.
-            Our Kennedy Ave bays are open Monday through Saturday 8 AM–8 PM and Sunday 9 AM–5 PM.
-          </p>
-        </div>
-
-        <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <li class="service-card">
-            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="#icon-disc"/></svg></span>
-            <h3 class="service-card__title">Brakes &amp; Suspension</h3>
-            <p class="service-card__body">Squealing, grinding, pulling, or a bouncy ride on Hammond's potholes? We inspect and repair it the right way.</p>
-            <ul class="check-list">
-              <li>Pads, rotors &amp; calipers</li>
-              <li>Brake lines &amp; fluid</li>
-              <li>Shocks, struts &amp; springs</li>
-              <li>Ball joints &amp; tie rods</li>
-            </ul>
-          </li>
-          <li class="service-card">
-            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="#icon-gauge"/></svg></span>
-            <h3 class="service-card__title">Tune-Ups</h3>
-            <p class="service-card__body">Rough idle, hard starts, or falling gas mileage? A proper tune-up brings back the power and efficiency you've lost.</p>
-            <ul class="check-list">
-              <li>Spark plugs &amp; ignition coils</li>
-              <li>Air &amp; fuel filters</li>
-              <li>Belts &amp; hoses</li>
-              <li>Fluid checks &amp; top-offs</li>
-            </ul>
-          </li>
-          <li class="service-card">
-            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="#icon-cloud"/></svg></span>
-            <h3 class="service-card__title">Emissions Testing &amp; Repair</h3>
-            <p class="service-card__body">Lake County requires emissions checks. We find what's keeping your vehicle from passing and fix it, so you pass the first time.</p>
-            <ul class="check-list">
-              <li>Pre-test emissions check</li>
-              <li>Failed-test diagnosis</li>
-              <li>O2 sensors &amp; EVAP leaks</li>
-              <li>Catalytic converter service</li>
-            </ul>
-          </li>
-          <li class="service-card">
-            <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="#icon-activity"/></svg></span>
-            <h3 class="service-card__title">General Diagnostics</h3>
-            <p class="service-card__body">Check-engine light on? We scan it, trace the real cause, and explain it in plain English. No guesswork, no parts cannon.</p>
-            <ul class="check-list">
-              <li>Check-engine light scans</li>
-              <li>Electrical &amp; battery testing</li>
-              <li>No-start &amp; stalling issues</li>
-              <li>Written repair estimates</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ===================== Best Prices guarantee ===================== -->
-    <section class="price-banner" aria-labelledby="price-heading">
-      <div class="container-site grid items-center gap-8 py-14 md:py-16 lg:grid-cols-12">
-        <div class="lg:col-span-7">
-          <div class="flex items-center gap-3">
-            <svg class="h-8 w-8 shrink-0 text-chrome" aria-hidden="true" focusable="false"><use href="#icon-shield-check"/></svg>
-            <p class="eyebrow">Our Value Guarantee</p>
-          </div>
-          <h2 id="price-heading" class="mt-4 text-3xl text-chrome sm:text-4xl lg:text-5xl">Best Prices in Northwest Indiana. Guaranteed.</h2>
-          <p class="mt-4 max-w-2xl text-silver sm:text-lg">
-            From a used tire to a heavy-duty tow, you get a fair, upfront price from the person doing the work.
-            No inflated shop rates, no upsells, and no surprises on the invoice.
-          </p>
-        </div>
-        <div class="lg:col-span-5">
-          <ul class="grid gap-3">
-            <li class="price-point"><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>Upfront quote before any work begins</li>
-            <li class="price-point"><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>No repairs without your approval</li>
-            <li class="price-point"><svg aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>Used-tire and repair options to fit your budget</li>
-          </ul>
-          <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
-            <a href="#quote" class="btn btn-chrome">
-              <span>Request an Estimate</span>
-              <svg aria-hidden="true" focusable="false"><use href="#icon-arrow-right"/></svg>
-            </a>
-            <a href="tel:2193339293" class="btn btn-steel" aria-label="Call for a price quote at (219) 333-9293">
-              <svg aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg>
-              <span>Call for a Quote</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== Hours & Location ===================== -->
+    <!-- ===================== Hours & location ===================== -->
     <section id="location" class="section" aria-labelledby="location-heading">
-      <div class="container-site">
-        <div class="section-head">
-          <p class="eyebrow">Hours &amp; Location</p>
-          <h2 id="location-heading" class="section-title">Always On for Emergencies. Open 7 Days for Service.</h2>
-          <p class="section-lede">
-            Our shop is right on Kennedy Ave in Hammond, with quick access to I-80/94 and Cline Ave.
-            Towing and roadside never close. The repair bays keep long hours so you can come in before or after work.
-          </p>
-        </div>
+      <div class="wrap">
+        <p class="label">Hours &amp; Location</p>
+        <h2 id="location-heading" class="section-title">6704 Kennedy Ave, Hammond</h2>
+        <p class="section-lede">On Kennedy Ave, close to I-80/94 and Cline Ave. Towing never closes, and the bays stay open late so you can come in after work.</p>
 
-        <div class="grid gap-6 lg:grid-cols-12">
-          <div class="grid gap-6 lg:col-span-5">
-
-            <div class="hours-card hours-card--emergency">
-              <div class="flex items-start justify-between gap-4">
-                <div>
-                  <p class="pill-emergency">Dispatch</p>
-                  <h3 class="mt-3 text-2xl text-chrome">Towing &amp; Roadside</h3>
-                </div>
-                <svg class="h-8 w-8 shrink-0 text-alert" aria-hidden="true" focusable="false"><use href="#icon-truck"/></svg>
+        <div class="mt-10 grid gap-6 lg:grid-cols-12">
+          <div class="grid content-start gap-6 lg:col-span-5">
+            <div class="board p-6">
+              <div class="flex items-center justify-between gap-4">
+                <h3 class="text-xl">Towing &amp; Roadside</h3>
+                <span class="tag-live">Open</span>
               </div>
-              <p class="mt-4 font-display text-4xl uppercase text-chrome">24 Hours · 7 Days</p>
-              <p class="mt-2 text-sm text-silver">Nights, weekends, and holidays. Roberto picks up the dispatch line himself.</p>
-              <a href="tel:2193339293" class="btn btn-emergency mt-5 w-full" aria-label="Call 24/7 dispatch at (219) 333-9293">
-                <svg aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg>
+              <p class="mt-3 font-display text-4xl font-bold text-chrome">24 Hours · 7 Days</p>
+              <p class="mt-2 text-sm text-muted">Nights, weekends, holidays. Roberto picks up the dispatch line himself.</p>
+              <a href="tel:2193339293" class="btn btn-call mt-5 w-full" aria-label="Call 24/7 dispatch at (219) 333-9293">
+                <svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
                 <span>(219) 333-9293</span>
               </a>
             </div>
 
-            <div class="hours-card">
-              <div class="flex items-start justify-between gap-4">
-                <div>
-                  <p class="eyebrow">Shop &amp; Diagnostic Bays</p>
-                  <p class="mt-2 text-sm text-silver" data-shop-status aria-live="polite">Mon–Sat 8 AM–8 PM · Sun 9 AM–5 PM</p>
-                </div>
-                <svg class="h-8 w-8 shrink-0 text-silver" aria-hidden="true" focusable="false"><use href="#icon-clock"/></svg>
-              </div>
-              <table class="hours-table mt-4">
+            <div class="panel p-6">
+              <h3 class="text-xl">Shop &amp; Diagnostic Bays</h3>
+              <p class="mt-1 text-sm text-muted" data-shop-status aria-live="polite">Mon–Sat 8 AM–8 PM · Sun 9 AM–5 PM</p>
+              <table class="hours mt-4">
                 <caption class="sr-only">Shop and diagnostic bay hours</caption>
                 <tbody>
                   <tr data-day="1"><th scope="row">Monday</th><td>8:00 AM – 8:00 PM</td></tr>
@@ -914,74 +941,58 @@
             </div>
           </div>
 
-          <div class="lg:col-span-7">
-            <div class="map-card">
-              <div class="map-frame">
-                <iframe
-                  src="https://www.google.com/maps?q=6704+Kennedy+Ave,+Hammond,+IN+46323&amp;z=15&amp;output=embed"
-                  title="Map showing NWI Auto Service and Towing at 6704 Kennedy Ave, Hammond, Indiana"
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  allowfullscreen></iframe>
-              </div>
-              <div class="flex flex-col gap-4 border-t border-steel p-6 sm:flex-row sm:items-center sm:justify-between">
-                <address class="not-italic">
-                  <span class="block font-display text-lg uppercase tracking-wide text-chrome">NWI Auto Service and Towing</span>
-                  <span class="block text-silver">6704 Kennedy Ave, Hammond, IN 46323</span>
-                </address>
-                <a href="https://www.google.com/maps/dir/?api=1&amp;destination=6704+Kennedy+Ave,+Hammond,+IN+46323" target="_blank" rel="noopener" class="btn btn-steel shrink-0">
-                  <svg aria-hidden="true" focusable="false"><use href="#icon-directions"/></svg>
-                  <span>Get Directions</span>
-                  <span class="sr-only">(opens Google Maps in a new tab)</span>
-                </a>
-              </div>
+          <div class="panel flex flex-col overflow-hidden lg:col-span-7">
+            <div class="map-frame">
+              <iframe src="https://www.google.com/maps?q=6704+Kennedy+Ave,+Hammond,+IN+46323&amp;z=15&amp;output=embed"
+                      title="Map showing NWI Auto Service and Towing at 6704 Kennedy Ave, Hammond, Indiana"
+                      loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </div>
+            <div class="flex flex-col gap-4 border-t border-line p-6 sm:flex-row sm:items-center sm:justify-between">
+              <address class="not-italic">
+                <span class="block font-display text-lg font-semibold tracking-[0.05em] text-chrome">NWI Auto Service and Towing</span>
+                <span class="block text-muted">6704 Kennedy Ave, Hammond, IN 46323</span>
+              </address>
+              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=6704+Kennedy+Ave,+Hammond,+IN+46323" target="_blank" rel="noopener" class="btn btn-outline shrink-0">
+                <svg aria-hidden="true" focusable="false"><use href="#i-directions"/></svg>
+                <span>Get Directions</span>
+                <span class="sr-only">(opens Google Maps in a new tab)</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== Why Choose Us + Quote form ===================== -->
-    <section id="quote" class="section section--raised" aria-labelledby="quote-heading">
-      <div class="container-site grid gap-12 lg:grid-cols-12">
-
+    <!-- ===================== Why us + quote form ===================== -->
+    <section id="quote" class="section bg-panel" aria-labelledby="quote-heading">
+      <div class="wrap grid gap-12 lg:grid-cols-12">
         <div class="lg:col-span-5">
-          <p class="eyebrow">Why Choose NWI Auto</p>
+          <p class="label">Why Call NWI Auto</p>
           <h2 class="section-title">A Local Shop That Answers Its Own Phone</h2>
-
-          <ul class="mt-8 grid gap-4">
-            <li class="pillar">
-              <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg></span>
-              <div>
-                <h3>Talk Directly to Roberto</h3>
-                <p>No call centers or phone trees. You talk to the owner, who knows the trucks, the roads, and your vehicle.</p>
-              </div>
-            </li>
-            <li class="pillar">
-              <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="#icon-bolt"/></svg></span>
-              <div>
-                <h3>Rapid Arrival</h3>
-                <p>Based right here in Hammond, we're minutes from I-80/94, Cline Ave, and Indianapolis Blvd, not dispatched from across the state.</p>
-              </div>
-            </li>
-            <li class="pillar">
-              <span class="icon-badge"><svg aria-hidden="true" focusable="false"><use href="#icon-shield-check"/></svg></span>
-              <div>
-                <h3>Transparent Pricing</h3>
-                <p>You hear the price before we hook up or pick up a wrench. Best prices in the region, and no surprise fees.</p>
-              </div>
-            </li>
-          </ul>
+          <dl class="mt-8 divide-y divide-line border-y border-line">
+            <div class="py-5">
+              <dt class="font-display text-xl font-semibold tracking-[0.05em] text-chrome">You talk to Roberto</dt>
+              <dd class="mt-1 text-muted">No call center, no phone tree. The owner picks up and knows the trucks, the roads, and the work.</dd>
+            </div>
+            <div class="py-5">
+              <dt class="font-display text-xl font-semibold tracking-[0.05em] text-chrome">We're close</dt>
+              <dd class="mt-1 text-muted">Based on Kennedy Ave, minutes from I-80/94, Cline Ave, and Indianapolis Blvd. Not dispatched from across the state.</dd>
+            </div>
+            <div class="py-5">
+              <dt class="font-display text-xl font-semibold tracking-[0.05em] text-chrome">Price first, then work</dt>
+              <dd class="mt-1 text-muted">You hear the number before we hook up or pick up a wrench. Best prices in town, no surprise fees.</dd>
+            </div>
+          </dl>
         </div>
 
         <div class="lg:col-span-7">
-          <div class="form-card">
-            <h2 id="quote-heading" class="text-3xl text-chrome">Get a Quick Estimate</h2>
-            <p class="mt-2 text-silver">Four quick fields. Roberto will call or text you back with a price.</p>
+          <div class="rounded border border-line border-t-[3px] border-t-silver bg-asphalt p-6 md:p-9">
+            <h2 id="quote-heading" class="text-3xl">Get a Quick Estimate</h2>
+            <p class="mt-2 text-muted">Four fields. Roberto calls or texts you back with a price.</p>
 
-            <p class="form-alert mt-5">
-              <svg aria-hidden="true" focusable="false"><use href="#icon-bolt"/></svg>
-              <span>Stranded or in an unsafe spot? Don't wait on a form. <a href="tel:2193339293" class="font-semibold underline underline-offset-2">Call (219) 333-9293</a> now.</span>
+            <p class="mt-5 flex gap-3 rounded-sm border border-safety/60 bg-safety/10 p-4 text-[15px] text-chrome">
+              <span class="dot mt-1.5" aria-hidden="true"></span>
+              <span>Stranded or somewhere unsafe? Skip the form. <a href="tel:2193339293" class="font-semibold underline underline-offset-2">Call (219) 333-9293</a> now.</span>
             </p>
 
             <form id="quote-form" class="mt-6 grid gap-5" novalidate data-endpoint="">
@@ -994,16 +1005,16 @@
               <div class="field">
                 <label for="q-phone">Phone number</label>
                 <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="q-phone-hint q-phone-error" placeholder="(219) 555-0123" maxlength="20">
-                <p id="q-phone-hint" class="field-hint">We'll only use this to send your estimate.</p>
+                <p id="q-phone-hint" class="field-hint">Only used to send your estimate.</p>
                 <p id="q-phone-error" class="field-error" hidden>Please enter a 10-digit phone number.</p>
               </div>
 
               <fieldset class="field" aria-describedby="q-vehicle-error">
                 <legend>Vehicle class</legend>
                 <div class="segmented">
-                  <label><input type="radio" name="vehicle" value="Car / SUV / Light Pickup" required><span><svg aria-hidden="true" focusable="false"><use href="#icon-key"/></svg>Car</span></label>
-                  <label><input type="radio" name="vehicle" value="Truck / Commercial"><span><svg aria-hidden="true" focusable="false"><use href="#icon-truck"/></svg>Truck</span></label>
-                  <label><input type="radio" name="vehicle" value="Heavy Equipment"><span><svg aria-hidden="true" focusable="false"><use href="#icon-hardhat"/></svg>Heavy Equipment</span></label>
+                  <label><input type="radio" name="vehicle" value="Car / SUV / Light Pickup" required><span><svg aria-hidden="true" focusable="false"><use href="#i-key"/></svg>Car</span></label>
+                  <label><input type="radio" name="vehicle" value="Truck / Commercial"><span><svg aria-hidden="true" focusable="false"><use href="#i-truck"/></svg>Truck</span></label>
+                  <label><input type="radio" name="vehicle" value="Heavy Equipment"><span><svg aria-hidden="true" focusable="false"><use href="#i-hardhat"/></svg>Heavy Equipment</span></label>
                 </div>
                 <p id="q-vehicle-error" class="field-error" hidden>Please choose a vehicle class.</p>
               </fieldset>
@@ -1034,46 +1045,42 @@
                 <p id="q-service-error" class="field-error" hidden>Please choose the service you need.</p>
               </div>
 
-              <button type="submit" class="btn btn-chrome btn-lg w-full">
+              <button type="submit" class="btn btn-solid btn-lg w-full">
                 <span>Get My Estimate</span>
-                <svg aria-hidden="true" focusable="false"><use href="#icon-arrow-right"/></svg>
+                <svg aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
               </button>
 
               <p id="quote-status" class="form-status" role="status" aria-live="polite" hidden></p>
             </form>
           </div>
         </div>
-
       </div>
     </section>
   </main>
 
   <!-- ===================== Footer ===================== -->
-  <footer id="site-footer" class="site-footer" aria-labelledby="footer-heading">
+  <footer id="site-footer" class="bg-[#0B0C0E]" aria-labelledby="footer-heading">
     <h2 id="footer-heading" class="sr-only">Contact information and site links</h2>
-
-    <div class="container-site grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-12 lg:py-16">
-
+    <div class="wrap grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-12 lg:py-16">
       <div class="sm:col-span-2 lg:col-span-3">
         <a href="#top" class="inline-flex items-center gap-3" aria-label="NWI Auto Service and Towing, back to top">
           <svg class="h-10 w-20 shrink-0" aria-hidden="true" focusable="false"><use href="#nwi-crest"/></svg>
           <span class="flex flex-col leading-none">
-            <span class="whitespace-nowrap font-display text-lg font-bold uppercase tracking-wide text-chrome">NWI Auto Service</span>
-            <span class="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-silver">and Towing</span>
+            <span class="whitespace-nowrap font-display text-lg font-bold text-chrome">NWI Auto Service</span>
+            <span class="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">and Towing</span>
           </span>
         </a>
-        <p class="mt-5 max-w-sm text-sm text-silver">
-          Locally owned towing, roadside assistance, tire sales, and honest auto repair on Kennedy Ave in Hammond,
-          serving cars, pickups, semis, and heavy equipment across Northwest Indiana.
+        <p class="mt-5 max-w-sm text-sm text-muted">
+          Locally owned towing, roadside help, tires, and auto repair on Kennedy Ave in Hammond, for cars, pickups, semis, and heavy equipment.
         </p>
-        <address class="mt-6 grid gap-3 not-italic text-sm">
-          <a href="tel:2193339293" class="footer-contact" aria-label="Call Roberto 24/7 at (219) 333-9293">
-            <svg aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg>
-            <span><span class="block font-semibold text-chrome">(219) 333-9293</span><span class="text-silver">Ask for Roberto · 24/7 dispatch</span></span>
+        <address class="mt-6 grid gap-4 text-sm not-italic">
+          <a href="tel:2193339293" class="flex items-start gap-3" aria-label="Call Roberto 24/7 at (219) 333-9293">
+            <svg class="mt-0.5 h-5 w-5 shrink-0 text-safety-text" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
+            <span><span class="block font-semibold text-chrome">(219) 333-9293</span><span class="text-muted">Ask for Roberto · 24/7 dispatch</span></span>
           </a>
-          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=6704+Kennedy+Ave,+Hammond,+IN+46323" target="_blank" rel="noopener" class="footer-contact">
-            <svg aria-hidden="true" focusable="false"><use href="#icon-map-pin"/></svg>
-            <span><span class="block font-semibold text-chrome">6704 Kennedy Ave</span><span class="text-silver">Hammond, IN 46323</span><span class="sr-only"> (opens Google Maps directions in a new tab)</span></span>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=6704+Kennedy+Ave,+Hammond,+IN+46323" target="_blank" rel="noopener" class="flex items-start gap-3">
+            <svg class="mt-0.5 h-5 w-5 shrink-0 text-muted" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>
+            <span><span class="block font-semibold text-chrome">6704 Kennedy Ave</span><span class="text-muted">Hammond, IN 46323</span><span class="sr-only"> (opens Google Maps directions in a new tab)</span></span>
           </a>
         </address>
       </div>
@@ -1086,13 +1093,13 @@
           <li><a href="#heavy-duty">Heavy Duty &amp; Commercial</a></li>
           <li><a href="#tires">New, Used &amp; Truck Tires</a></li>
           <li><a href="#repair">Auto Repair &amp; Diagnostics</a></li>
-          <li><a href="#quote">Request an Estimate</a></li>
+          <li><a href="#quote">Get an Estimate</a></li>
         </ul>
       </nav>
 
       <nav class="lg:col-span-3" aria-labelledby="footer-areas">
         <h3 id="footer-areas" class="footer-title">Service Area</h3>
-        <ul class="footer-links footer-links--areas">
+        <ul class="footer-links grid-cols-2 gap-x-4">
           <li><a href="#roadside" aria-label="24/7 towing and roadside assistance in Hammond">Hammond</a></li>
           <li><a href="#roadside" aria-label="24/7 towing and roadside assistance in Whiting">Whiting</a></li>
           <li><a href="#roadside" aria-label="24/7 towing and roadside assistance in East Chicago">East Chicago</a></li>
@@ -1100,7 +1107,7 @@
           <li><a href="#roadside" aria-label="24/7 towing and roadside assistance in Highland">Highland</a></li>
           <li><a href="#roadside" aria-label="24/7 towing and roadside assistance in Munster">Munster</a></li>
         </ul>
-        <p class="mt-4 text-sm text-silver">Plus the I-80/94 Borman Expressway, Cline Ave, and Indianapolis Blvd corridors.</p>
+        <p class="mt-4 text-sm text-muted">Plus the I-80/94 Borman Expressway, Cline Ave, and Indianapolis Blvd corridors.</p>
       </nav>
 
       <div class="lg:col-span-3">
@@ -1108,40 +1115,285 @@
         <dl class="grid gap-4 text-sm">
           <div>
             <dt class="font-semibold text-chrome">Towing &amp; Roadside</dt>
-            <dd class="mt-1"><span class="pill-emergency">Open 24/7</span></dd>
+            <dd class="mt-1 font-semibold text-safety-text">Open 24/7</dd>
           </div>
           <div>
             <dt class="font-semibold text-chrome">Shop &amp; Diagnostic Bays</dt>
-            <dd class="mt-1 text-silver">Mon–Sat: 8:00 AM – 8:00 PM</dd>
-            <dd class="text-silver">Sunday: 9:00 AM – 5:00 PM</dd>
+            <dd class="mt-1 text-muted">Mon–Sat: 8:00 AM – 8:00 PM</dd>
+            <dd class="text-muted">Sunday: 9:00 AM – 5:00 PM</dd>
           </div>
         </dl>
       </div>
     </div>
 
-    <div class="border-t border-steel">
-      <div class="container-site flex flex-col gap-3 py-6 text-sm text-silver sm:flex-row sm:items-center sm:justify-between">
+    <div class="border-t border-line">
+      <div class="wrap flex flex-col gap-2 py-5 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
         <p>&copy; <span data-year>2026</span> NWI Auto Service and Towing. All rights reserved.</p>
-        <a href="#top" class="inline-flex min-h-[44px] items-center gap-2 self-start font-medium text-silver hover:text-chrome sm:self-auto">
+        <a href="#top" class="inline-flex min-h-[44px] items-center gap-2 self-start font-medium hover:text-chrome sm:self-auto">
           Back to top
-          <svg class="h-4 w-4 -rotate-90" aria-hidden="true" focusable="false"><use href="#icon-arrow-right"/></svg>
+          <svg class="h-4 w-4 -rotate-90" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
         </a>
       </div>
     </div>
   </footer>
 
-  <!-- ===================== Mobile emergency dialer ===================== -->
-  <nav class="mobile-dialer md:hidden" aria-label="Quick contact">
-    <a href="tel:2193339293" class="btn btn-emergency flex-1" aria-label="Call Roberto 24/7 at (219) 333-9293">
-      <svg aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg>
+  <!-- ===================== Mobile emergency bar ===================== -->
+  <nav class="mobile-dialer" aria-label="Quick contact">
+    <a href="tel:2193339293" class="btn btn-call flex-1" aria-label="Call Roberto 24/7 at (219) 333-9293">
+      <svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
       <span>Call 24/7</span>
     </a>
-    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=6704+Kennedy+Ave,+Hammond,+IN+46323" target="_blank" rel="noopener" class="btn btn-steel" aria-label="Directions to 6704 Kennedy Ave (opens Google Maps in a new tab)">
-      <svg aria-hidden="true" focusable="false"><use href="#icon-directions"/></svg>
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=6704+Kennedy+Ave,+Hammond,+IN+46323" target="_blank" rel="noopener" class="btn btn-outline" aria-label="Directions to 6704 Kennedy Ave (opens Google Maps in a new tab)">
+      <svg aria-hidden="true" focusable="false"><use href="#i-directions"/></svg>
       <span>Directions</span>
     </a>
   </nav>
 
-  <script src="assets/js/main.js" defer></script>
+  <script>
+    (function () {
+      'use strict';
+
+      var header = document.getElementById('site-header');
+      var toggle = document.getElementById('menu-toggle');
+      var menu = document.getElementById('mobile-menu');
+
+      /* Header shadow once the page scrolls */
+      function onScroll() {
+        header.classList.toggle('is-scrolled', window.scrollY > 8);
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      /* Mobile menu */
+      function setMenu(open) {
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        menu.hidden = !open;
+      }
+
+      toggle.addEventListener('click', function () {
+        setMenu(toggle.getAttribute('aria-expanded') !== 'true');
+      });
+
+      menu.addEventListener('click', function (e) {
+        if (e.target.closest('a')) setMenu(false);
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+          setMenu(false);
+          toggle.focus();
+        }
+      });
+
+      window.matchMedia('(min-width: 1024px)').addEventListener('change', function (mq) {
+        if (mq.matches) setMenu(false);
+      });
+
+      /* Live shop status, computed in Hammond's time zone (America/Chicago) */
+      var HOURS = { 0: [9, 17], 1: [8, 20], 2: [8, 20], 3: [8, 20], 4: [8, 20], 5: [8, 20], 6: [8, 20] };
+      var DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+      function formatHour(h) {
+        var suffix = h >= 12 ? 'PM' : 'AM';
+        return (h % 12 || 12) + ' ' + suffix;
+      }
+
+      function hammondNow() {
+        var parts = new Intl.DateTimeFormat('en-US', {
+          timeZone: 'America/Chicago',
+          weekday: 'short',
+          hour: 'numeric',
+          minute: 'numeric',
+          hourCycle: 'h23'
+        }).formatToParts(new Date());
+        var get = function (type) {
+          return parts.filter(function (p) { return p.type === type; })[0].value;
+        };
+        return {
+          day: DAYS.indexOf(get('weekday')),
+          minutes: (parseInt(get('hour'), 10) % 24) * 60 + parseInt(get('minute'), 10)
+        };
+      }
+
+      function renderShopStatus() {
+        var els = document.querySelectorAll('[data-shop-status]');
+        if (!els.length) return;
+
+        var now;
+        try { now = hammondNow(); } catch (err) { return; } // keep static hours text
+        if (now.day < 0) return;
+
+        var rows = document.querySelectorAll('.hours tr[data-day]');
+        for (var i = 0; i < rows.length; i++) {
+          rows[i].classList.toggle('is-today', Number(rows[i].getAttribute('data-day')) === now.day);
+        }
+
+        var today = HOURS[now.day];
+        var openAt = today[0] * 60;
+        var closeAt = today[1] * 60;
+        var html;
+
+        if (now.minutes >= openAt && now.minutes < closeAt) {
+          html = '<span class="status-open">Open now</span> · until ' + formatHour(today[1]) + ' today';
+        } else {
+          var next = now.minutes < openAt
+            ? 'opens today at ' + formatHour(today[0])
+            : 'opens ' + DAYS[(now.day + 1) % 7] + ' at ' + formatHour(HOURS[(now.day + 1) % 7][0]);
+          html = '<span class="status-closed">Closed</span> · ' + next + ' · towing still 24/7';
+        }
+
+        for (var j = 0; j < els.length; j++) {
+          if (els[j].innerHTML !== html) els[j].innerHTML = html;
+        }
+      }
+
+      renderShopStatus();
+      setInterval(renderShopStatus, 60000);
+
+      /* Footer year */
+      var yearEl = document.querySelector('[data-year]');
+      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+      /* Mark the section currently in view in the desktop nav */
+      var navLinks = document.querySelectorAll('.nav-link');
+      if ('IntersectionObserver' in window && navLinks.length) {
+        var byId = {};
+        for (var n = 0; n < navLinks.length; n++) byId[navLinks[n].getAttribute('href').slice(1)] = navLinks[n];
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            for (var k in byId) byId[k].removeAttribute('aria-current');
+            byId[entry.target.id].setAttribute('aria-current', 'true');
+          });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        Object.keys(byId).forEach(function (id) {
+          var section = document.getElementById(id);
+          if (section) observer.observe(section);
+        });
+      }
+
+      /* Quick estimate form
+         Set data-endpoint on the form to a POST endpoint (e.g. a Formspree URL) to
+         deliver submissions. Without one, the form hands the request off as a text
+         message to the shop phone. */
+      var form = document.getElementById('quote-form');
+      if (!form) return;
+
+      var SHOP_PHONE = '2193339293';
+      var status = document.getElementById('quote-status');
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var vehicleGroup = form.querySelector('.segmented');
+
+      function digits(value) { return value.replace(/\D/g, ''); }
+
+      function validPhone(value) {
+        var d = digits(value);
+        return d.length === 10 || (d.length === 11 && d.charAt(0) === '1');
+      }
+
+      function setError(input, errorId, invalid) {
+        var err = document.getElementById(errorId);
+        if (input) input.setAttribute('aria-invalid', String(invalid));
+        err.hidden = !invalid;
+      }
+
+      function validate() {
+        var name = form.elements.name;
+        var phone = form.elements.phone;
+        var service = form.elements.service;
+        var vehicle = form.querySelector('input[name="vehicle"]:checked');
+
+        var nameBad = name.value.trim().length < 2;
+        var phoneBad = !validPhone(phone.value);
+        var vehicleBad = !vehicle;
+        var serviceBad = !service.value;
+
+        setError(name, 'q-name-error', nameBad);
+        setError(phone, 'q-phone-error', phoneBad);
+        setError(service, 'q-service-error', serviceBad);
+        document.getElementById('q-vehicle-error').hidden = !vehicleBad;
+        vehicleGroup.setAttribute('data-invalid', String(vehicleBad));
+
+        var firstBad = nameBad ? name
+          : phoneBad ? phone
+          : vehicleBad ? form.querySelector('input[name="vehicle"]')
+          : serviceBad ? service
+          : null;
+        if (firstBad) firstBad.focus();
+        return !firstBad;
+      }
+
+      function showStatus(kind, html) {
+        status.className = 'form-status is-' + kind;
+        status.innerHTML = html;
+        status.hidden = false;
+      }
+
+      function formatPhone(value) {
+        var d = digits(value).slice(-10);
+        return '(' + d.slice(0, 3) + ') ' + d.slice(3, 6) + '-' + d.slice(6);
+      }
+
+      function smsBody() {
+        return 'Estimate request from ' + form.elements.name.value.trim() +
+          '\nPhone: ' + formatPhone(form.elements.phone.value) +
+          '\nVehicle: ' + form.querySelector('input[name="vehicle"]:checked').value +
+          '\nService: ' + form.elements.service.value;
+      }
+
+      // Clear an error as soon as the field is fixed
+      form.addEventListener('input', function (e) {
+        var t = e.target;
+        if (t.getAttribute('aria-invalid') === 'true') {
+          var ok = t.name === 'phone' ? validPhone(t.value) : t.name === 'name' ? t.value.trim().length >= 2 : !!t.value;
+          if (ok) setError(t, 'q-' + t.name + '-error', false);
+        }
+      });
+      form.addEventListener('change', function (e) {
+        if (e.target.name === 'vehicle') {
+          document.getElementById('q-vehicle-error').hidden = true;
+          vehicleGroup.setAttribute('data-invalid', 'false');
+        }
+        if (e.target.name === 'service' && e.target.value) setError(e.target, 'q-service-error', false);
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        status.hidden = true;
+        if (!validate()) return;
+
+        var endpoint = form.getAttribute('data-endpoint');
+
+        if (endpoint) {
+          submitBtn.disabled = true;
+          fetch(endpoint, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { Accept: 'application/json' }
+          }).then(function (res) {
+            if (!res.ok) throw new Error('Request failed');
+            form.reset();
+            showStatus('success', '<strong>Got it. Thanks!</strong> Roberto will call or text you shortly. Need help right now? <a href="tel:' + SHOP_PHONE + '">Call (219) 333-9293</a>.');
+          }).catch(function () {
+            showStatus('error', 'Sorry, that didn\'t go through. Please <a href="tel:' + SHOP_PHONE + '">call (219) 333-9293</a> and we\'ll quote you over the phone.');
+          }).then(function () {
+            submitBtn.disabled = false;
+          });
+          return;
+        }
+
+        var smsHref = 'sms:' + SHOP_PHONE + '?&body=' + encodeURIComponent(smsBody());
+        showStatus('success',
+          '<strong>Almost done.</strong> Your request is ready to send as a text to Roberto. ' +
+          '<a href="' + smsHref + '">Open it in Messages</a>, or ' +
+          '<a href="tel:' + SHOP_PHONE + '">call (219) 333-9293</a> for a quote right away.');
+
+        if (window.matchMedia('(pointer: coarse)').matches) {
+          window.location.href = smsHref;
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
