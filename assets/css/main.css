@@ -318,3 +318,143 @@ img, svg { display: block; max-width: 100%; }
 .btn.header-call { display: none; }
 @media (min-width: 768px)  { .btn.header-call { display: inline-flex; } }
 @media (min-width: 1024px) { .menu-toggle { display: none; } }
+
+/* --- Sections ------------------------------------------------------------ */
+
+.section { padding-block: 64px; border-bottom: 1px solid var(--color-steel); }
+@media (min-width: 768px) { .section { padding-block: 96px; } }
+
+.section--raised { background: #15181B; }
+
+.section--heavy {
+  position: relative;
+  background:
+    radial-gradient(ellipse 60% 60% at 90% 10%, rgba(166, 173, 181, 0.08), transparent 70%),
+    var(--color-asphalt);
+}
+.section--heavy::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: repeating-linear-gradient(135deg, var(--color-steel) 0 14px, var(--color-graphite) 14px 28px);
+}
+
+.section-head { max-width: 720px; margin-bottom: 40px; }
+.section-title {
+  margin-top: 16px;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  color: var(--color-chrome);
+}
+.section-lede {
+  margin-top: 16px;
+  font-size: 1.0625rem;
+  color: var(--color-silver);
+}
+
+/* --- Service cards ------------------------------------------------------- */
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background: var(--color-graphite);
+  border: 1px solid var(--color-steel);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+}
+.service-card:hover { border-color: #4A525B; transform: translateY(-2px); }
+
+.service-card__title {
+  margin-top: 18px;
+  font-size: 1.25rem;
+  color: var(--color-chrome);
+}
+.service-card__body {
+  margin-top: 10px;
+  font-size: 0.9375rem;
+  color: var(--color-silver);
+}
+.service-card .check-list { margin-top: 16px; }
+
+.icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--color-asphalt);
+  border: 1px solid var(--color-steel);
+  color: var(--color-chrome);
+}
+.icon-badge svg { width: 24px; height: 24px; }
+.icon-badge--alert {
+  color: #FF8A93;
+  border-color: rgba(230, 57, 70, 0.45);
+  background: rgba(230, 57, 70, 0.08);
+}
+
+.check-list { display: grid; gap: 8px; font-size: 0.9375rem; color: var(--color-chrome); }
+.check-list li {
+  position: relative;
+  padding-left: 26px;
+}
+.check-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.3em;
+  width: 16px;
+  height: 16px;
+  background: var(--color-silver);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.best-for {
+  margin-top: auto;
+  padding-top: 18px;
+  font-size: 0.875rem;
+  color: var(--color-chrome);
+}
+.best-for span {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-silver);
+}
+
+.cta-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+  padding: 24px;
+  border: 1px solid rgba(230, 57, 70, 0.5);
+  border-radius: var(--radius-md);
+  background: linear-gradient(90deg, rgba(230, 57, 70, 0.12), rgba(27, 30, 34, 1) 60%);
+}
+@media (min-width: 768px) {
+  .cta-strip { flex-direction: row; align-items: center; justify-content: space-between; padding: 28px 32px; }
+}
+
+/* --- Heavy duty list ----------------------------------------------------- */
+
+.heavy-item {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background: var(--color-graphite);
+  border: 1px solid var(--color-steel);
+  border-left: 3px solid var(--color-silver);
+  border-radius: var(--radius-sm);
+}
+.heavy-item > svg { width: 28px; height: 28px; flex-shrink: 0; color: var(--color-chrome); }
+.heavy-item h3 { font-size: 1.125rem; color: var(--color-chrome); }
+.heavy-item p { margin-top: 6px; font-size: 0.9375rem; color: var(--color-silver); }
