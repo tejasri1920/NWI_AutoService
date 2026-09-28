@@ -176,10 +176,11 @@
     .mobile-link { display: block; padding: 13px 4px; border-bottom: 1px solid var(--line); color: var(--chrome); text-decoration: none; font-weight: 500; }
 
     /* Hero */
-    .hero-overlay { background: linear-gradient(180deg, rgba(16,18,20,.80) 0%, rgba(16,18,20,.88) 60%, #101214 100%); }
+    .hero-overlay { background: rgba(0, 0, 0, .55); }
     @media (min-width: 1024px) {
-      .hero-overlay { background: linear-gradient(90deg, #101214 0%, rgba(16,18,20,.85) 45%, rgba(16,18,20,.25) 100%); }
+      .hero-overlay { background: linear-gradient(90deg, rgba(0,0,0,.80) 0%, rgba(0,0,0,.50) 50%, rgba(0,0,0,.30) 100%); }
     }
+    .hero-copy { text-shadow: 0 2px 14px rgba(0, 0, 0, .55); }
 
     /* Panels */
     .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; }
@@ -416,9 +417,9 @@
             <source type="image/webp" srcset="assets/img/logo-240.webp 240w, assets/img/logo-600.webp 600w" sizes="84px">
             <img src="assets/img/logo-240.png" srcset="assets/img/logo-240.png 240w, assets/img/logo-600.png 600w" sizes="84px" alt="" class="h-11 w-auto shrink-0 md:h-12" width="84" height="48" decoding="async">
           </picture>
-          <span class="flex min-w-0 flex-col leading-none">
-            <span class="font-display text-lg font-bold text-chrome sm:text-xl">NWI Auto Service</span>
-            <span class="mt-1 whitespace-nowrap text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">and Towing<span class="hidden sm:inline"> · Hammond, IN</span></span>
+          <span class="font-display text-lg font-bold leading-[1.1] text-chrome sm:text-xl">
+            <span class="block xl:inline">NWI Auto Service</span>
+            <span class="block xl:inline">&amp; Towing</span>
           </span>
         </a>
 
@@ -468,48 +469,33 @@
     <!-- ===================== Hero ===================== -->
     <section id="top" class="relative isolate overflow-hidden border-b border-line" aria-labelledby="hero-heading">
       <img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&amp;fit=crop&amp;w=1600&amp;q=80"
-           alt="" class="absolute inset-0 -z-20 h-full w-full object-cover object-[70%_center]"
+           alt="" class="absolute inset-0 -z-20 h-full w-full object-cover object-[65%_40%]"
            width="1600" height="1067" fetchpriority="high" decoding="async">
       <div class="hero-overlay absolute inset-0 -z-10" aria-hidden="true"></div>
 
-      <div class="wrap py-10 lg:py-14">
-        <div class="max-w-2xl">
-          <p class="tag-live">24/7 Towing &amp; Roadside · Dispatch Open</p>
+      <div class="wrap flex min-h-[420px] items-center py-12 lg:min-h-[480px] lg:py-14">
+        <div class="hero-copy max-w-2xl lg:max-w-[50rem]">
+          <p class="tag-live">24/7 Road Service &amp; Towing</p>
 
-          <h1 id="hero-heading" class="mt-4 text-4xl sm:text-5xl">
-            Towing &amp; Auto Repair<br class="hidden sm:inline"> in Hammond, Indiana
+          <h1 id="hero-heading" class="mt-4 text-4xl sm:text-5xl lg:text-[3.5rem]">
+            Fast Towing &amp;<br class="hidden sm:inline"> Complete Auto Repair
           </h1>
 
-          <p class="mt-3 font-display text-lg font-medium text-silver sm:text-xl">
-            Fast dispatch. Honest mechanic work. Best prices in town.
-          </p>
-          <p class="mt-2 text-sm text-silver md:text-base">
-            Broke down on I-80/94 or Cline Ave? Call Roberto and a truck is on the way.
-            Need brakes, tires, or a check-engine light looked at? Pull into the shop on Kennedy Ave.
+          <p class="mt-3 text-base text-chrome sm:text-lg">
+            Serving Hammond &amp; Northwest Indiana with honest diagnostics and the best prices in town.
           </p>
 
           <div class="mt-6 flex flex-col gap-3 sm:flex-row">
-            <a href="tel:2193339293" class="btn btn-call btn-lg" aria-label="Call Roberto for 24/7 dispatch at (219) 333-9293">
+            <a href="tel:2193339293" class="btn btn-call btn-lg" aria-label="Call Roberto 24/7 at (219) 333-9293">
               <svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
               <span>Call Roberto 24/7</span>
             </a>
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=6704+Kennedy+Ave,+Hammond,+IN+46323" target="_blank" rel="noopener" class="btn btn-outline btn-lg">
-              <svg aria-hidden="true" focusable="false"><use href="#i-directions"/></svg>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=6704+Kennedy+Ave,+Hammond,+IN+46323" target="_blank" rel="noopener" class="btn btn-outline btn-lg !border-chrome/70 !bg-asphalt/60 hover:!bg-asphalt">
+              <svg aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>
               <span>Directions to Shop</span>
-              <span class="sr-only">(opens Google Maps in a new tab)</span>
+              <span class="sr-only">(6704 Kennedy Ave, opens Google Maps in a new tab)</span>
             </a>
           </div>
-
-          <dl class="mt-6 grid gap-x-8 gap-y-2 border-t border-line pt-4 text-sm sm:grid-cols-2">
-            <div>
-              <dt class="font-display text-xs font-semibold tracking-[0.14em] text-muted">Towing &amp; Roadside</dt>
-              <dd class="mt-0.5 font-semibold text-safety-text">Available 24 hours · 7 days</dd>
-            </div>
-            <div>
-              <dt class="font-display text-xs font-semibold tracking-[0.14em] text-muted">Shop Bays · 6704 Kennedy Ave</dt>
-              <dd class="mt-0.5 text-silver" data-shop-status aria-live="polite">Mon–Sat 8 AM–8 PM · Sun 9 AM–5 PM</dd>
-            </div>
-          </dl>
         </div>
       </div>
     </section>
@@ -940,7 +926,7 @@
           </picture>
           <span class="flex flex-col leading-none">
             <span class="whitespace-nowrap font-display text-lg font-bold text-chrome">NWI Auto Service</span>
-            <span class="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">and Towing</span>
+            <span class="whitespace-nowrap font-display text-lg font-bold text-chrome">&amp; Towing</span>
           </span>
         </a>
         <p class="mt-3 max-w-sm text-sm text-muted">
