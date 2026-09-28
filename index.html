@@ -191,15 +191,165 @@
 
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <!-- Phase 2: sticky navigation -->
-  <header id="site-header" role="banner"></header>
+  <!-- ===================== Sticky navigation ===================== -->
+  <header id="site-header" role="banner" class="site-header sticky top-0 z-50 border-b border-steel bg-asphalt/90 backdrop-blur">
+    <div class="container-site flex h-[72px] items-center justify-between gap-4">
+
+      <a href="#top" class="flex items-center gap-3 min-w-0" aria-label="NWI Auto Service and Towing, back to top">
+        <svg class="h-9 w-[72px] shrink-0" aria-hidden="true" focusable="false"><use href="#nwi-crest"/></svg>
+        <span class="flex flex-col leading-none min-w-0">
+          <span class="font-display text-lg font-bold uppercase tracking-wide text-chrome sm:text-xl">NWI Auto Service</span>
+          <span class="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-silver">and Towing · Hammond, IN</span>
+        </span>
+      </a>
+
+      <nav aria-label="Primary" class="hidden lg:block">
+        <ul class="flex items-center gap-7 text-sm font-medium text-silver">
+          <li><a class="nav-link" href="#roadside">Roadside</a></li>
+          <li><a class="nav-link" href="#towing">Towing</a></li>
+          <li><a class="nav-link" href="#heavy-duty">Heavy Duty</a></li>
+          <li><a class="nav-link" href="#tires">Tires</a></li>
+          <li><a class="nav-link" href="#repair">Auto Repair</a></li>
+          <li><a class="nav-link" href="#location">Hours &amp; Location</a></li>
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="tel:2193339293" class="btn btn-emergency header-call" aria-label="Call Roberto 24/7 at (219) 333-9293">
+          <svg aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg>
+          <span>(219) 333-9293</span>
+        </a>
+        <button type="button" id="menu-toggle" class="menu-toggle lg:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <svg class="icon-open h-6 w-6" aria-hidden="true" focusable="false"><use href="#icon-menu"/></svg>
+          <svg class="icon-close h-6 w-6" aria-hidden="true" focusable="false"><use href="#icon-close"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu lg:hidden border-t border-steel bg-asphalt" hidden>
+      <nav aria-label="Mobile" class="container-site py-4">
+        <ul class="grid gap-1 text-base font-medium">
+          <li><a class="mobile-link" href="#roadside">24/7 Roadside Assistance</a></li>
+          <li><a class="mobile-link" href="#towing">Towing &amp; Recovery</a></li>
+          <li><a class="mobile-link" href="#heavy-duty">Heavy Duty &amp; Commercial</a></li>
+          <li><a class="mobile-link" href="#tires">Tire Center</a></li>
+          <li><a class="mobile-link" href="#repair">Auto Repair</a></li>
+          <li><a class="mobile-link" href="#location">Hours &amp; Location</a></li>
+        </ul>
+        <a href="tel:2193339293" class="btn btn-emergency mt-4 w-full" aria-label="Call Roberto 24/7 at (219) 333-9293">
+          <svg aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg>
+          <span>Call Roberto 24/7</span>
+        </a>
+      </nav>
+    </div>
+  </header>
 
   <main id="main" tabindex="-1">
-    <!-- Phase 2: hero · Phase 3: roadside, towing, heavy · Phase 4: tires, repair · Phase 5: hours, location, quote -->
+
+    <!-- ===================== Hero ===================== -->
+    <section id="top" class="hero-bg border-b border-steel" aria-labelledby="hero-heading">
+      <div class="container-site grid items-center gap-10 py-12 md:py-20 lg:grid-cols-12 lg:gap-12 lg:py-24">
+
+        <div class="lg:col-span-7">
+          <p class="pill-emergency">24/7 Emergency Dispatch Line Open</p>
+
+          <h1 id="hero-heading" class="mt-5 text-4xl text-chrome sm:text-5xl lg:text-6xl">
+            Towing &amp; Honest Auto Repair in
+            <span class="text-silver">Hammond, Indiana</span>
+          </h1>
+
+          <p class="mt-5 max-w-2xl text-base text-silver sm:text-lg">
+            Broken down on I-80/94, stuck on Cline Ave, or need a mechanic you can trust on Kennedy Ave?
+            Call Roberto directly for fast roadside help, heavy-duty towing, and straight-talk diagnostics,
+            all at the best prices in Northwest Indiana.
+          </p>
+
+          <div class="mt-8 grid gap-4 sm:grid-cols-2">
+            <div class="intent-card intent-card--emergency">
+              <p class="eyebrow !text-[#FF8A93]">Need help right now?</p>
+              <a href="tel:2193339293" class="btn btn-emergency btn-lg mt-3 w-full" aria-label="Call Roberto for 24/7 dispatch at (219) 333-9293">
+                <svg aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg>
+                <span>Call Roberto Now</span>
+              </a>
+              <p class="mt-3 text-sm text-silver">
+                <span class="font-semibold text-chrome">(219) 333-9293</span> · Towing &amp; roadside, 24 hours a day, 7 days a week
+              </p>
+            </div>
+
+            <div class="intent-card">
+              <p class="eyebrow">Bringing it to the shop?</p>
+              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=6704+Kennedy+Ave,+Hammond,+IN+46323" target="_blank" rel="noopener" class="btn btn-steel btn-lg mt-3 w-full">
+                <svg aria-hidden="true" focusable="false"><use href="#icon-directions"/></svg>
+                <span>Get Directions</span>
+                <span class="sr-only">(opens Google Maps in a new tab)</span>
+              </a>
+              <p class="mt-3 text-sm text-silver">
+                <span class="font-semibold text-chrome">6704 Kennedy Ave</span> · Mon–Sat 8 AM–8 PM, Sun 9 AM–5 PM
+              </p>
+            </div>
+          </div>
+
+          <ul class="mt-8 grid grid-cols-2 gap-x-6 gap-y-3 text-sm text-chrome sm:grid-cols-4" aria-label="What we handle">
+            <li class="flex items-center gap-2"><svg class="h-4 w-4 shrink-0 text-silver" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>Cars, SUVs &amp; Pickups</li>
+            <li class="flex items-center gap-2"><svg class="h-4 w-4 shrink-0 text-silver" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>Semis &amp; Heavy Equipment</li>
+            <li class="flex items-center gap-2"><svg class="h-4 w-4 shrink-0 text-silver" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>New &amp; Used Tires</li>
+            <li class="flex items-center gap-2"><svg class="h-4 w-4 shrink-0 text-silver" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>Best Prices Guaranteed</li>
+          </ul>
+        </div>
+
+        <aside class="lg:col-span-5" aria-label="Dispatch and shop status">
+          <div class="surface-card shadow-plate overflow-hidden">
+            <div class="crest-stage flex justify-center border-b border-steel px-6 py-8">
+              <svg class="h-28 w-56 sm:h-32 sm:w-64" role="img" aria-label="NWI Auto Service and Towing winged crest"><use href="#nwi-crest"/></svg>
+            </div>
+
+            <dl class="divide-y divide-steel">
+              <div class="flex items-start gap-4 px-6 py-5">
+                <svg class="mt-0.5 h-6 w-6 shrink-0 text-alert" aria-hidden="true" focusable="false"><use href="#icon-truck"/></svg>
+                <div>
+                  <dt class="font-display text-lg uppercase tracking-wide text-chrome">Towing &amp; Roadside</dt>
+                  <dd class="mt-1 text-sm text-silver"><span class="font-semibold text-[#FF8A93]">Available now</span> · 24 hours, 7 days a week</dd>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 px-6 py-5">
+                <svg class="mt-0.5 h-6 w-6 shrink-0 text-silver" aria-hidden="true" focusable="false"><use href="#icon-wrench"/></svg>
+                <div>
+                  <dt class="font-display text-lg uppercase tracking-wide text-chrome">Shop &amp; Diagnostic Bays</dt>
+                  <dd class="mt-1 text-sm text-silver" data-shop-status aria-live="polite">Mon–Sat 8 AM–8 PM · Sun 9 AM–5 PM</dd>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 px-6 py-5">
+                <svg class="mt-0.5 h-6 w-6 shrink-0 text-silver" aria-hidden="true" focusable="false"><use href="#icon-map-pin"/></svg>
+                <div>
+                  <dt class="font-display text-lg uppercase tracking-wide text-chrome">Shop Location</dt>
+                  <dd class="mt-1 text-sm text-silver">6704 Kennedy Ave, Hammond, IN 46323</dd>
+                </div>
+              </div>
+            </dl>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- Phase 3: roadside, towing, heavy · Phase 4: tires, repair · Phase 5: hours, location, quote -->
   </main>
 
   <!-- Phase 6: footer -->
   <footer id="site-footer" role="contentinfo"></footer>
 
+  <!-- ===================== Mobile emergency dialer ===================== -->
+  <nav class="mobile-dialer md:hidden" aria-label="Quick contact">
+    <a href="tel:2193339293" class="btn btn-emergency flex-1" aria-label="Call Roberto 24/7 at (219) 333-9293">
+      <svg aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg>
+      <span>Call 24/7</span>
+    </a>
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=6704+Kennedy+Ave,+Hammond,+IN+46323" target="_blank" rel="noopener" class="btn btn-steel" aria-label="Directions to 6704 Kennedy Ave (opens Google Maps in a new tab)">
+      <svg aria-hidden="true" focusable="false"><use href="#icon-directions"/></svg>
+      <span>Directions</span>
+    </a>
+  </nav>
+
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
