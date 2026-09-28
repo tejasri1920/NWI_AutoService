@@ -706,3 +706,39 @@ img, svg { display: block; max-width: 100%; }
 @media (max-width: 400px) {
   .hours-table th, .hours-table td { padding-inline: 8px; }
 }
+
+/* --- Footer -------------------------------------------------------------- */
+
+.site-footer { background: #0C0E10; border-top: 1px solid var(--color-steel); }
+
+.footer-title {
+  margin-bottom: 16px;
+  font-size: 0.875rem;
+  letter-spacing: 0.14em;
+  color: var(--color-chrome);
+}
+
+.footer-links { display: grid; gap: 4px; font-size: 0.9375rem; }
+.footer-links a {
+  display: inline-block;
+  padding-block: 6px;
+  color: var(--color-silver);
+  text-decoration: none;
+  transition: color 0.2s var(--ease-out);
+}
+.footer-links a:hover { color: var(--color-chrome); text-decoration: underline; text-underline-offset: 3px; }
+.footer-links--areas { grid-template-columns: 1fr 1fr; column-gap: 16px; }
+
+.footer-contact {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-decoration: none;
+}
+.footer-contact > svg { width: 20px; height: 20px; flex-shrink: 0; margin-top: 2px; color: var(--color-silver); }
+.footer-contact:hover .font-semibold { text-decoration: underline; text-underline-offset: 3px; }
+
+/* --- Active section in desktop nav -------------------------------------- */
+
+.nav-link[aria-current="true"] { color: var(--color-chrome); }
+.nav-link[aria-current="true"]::after { transform: scaleX(1); }

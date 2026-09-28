@@ -99,6 +99,28 @@
   renderShopStatus();
   setInterval(renderShopStatus, 60000);
 
+  /* Footer year */
+  var yearEl = document.querySelector('[data-year]');
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  /* Mark the section currently in view in the desktop nav */
+  var navLinks = document.querySelectorAll('.nav-link');
+  if ('IntersectionObserver' in window && navLinks.length) {
+    var byId = {};
+    for (var n = 0; n < navLinks.length; n++) byId[navLinks[n].getAttribute('href').slice(1)] = navLinks[n];
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        for (var k in byId) byId[k].removeAttribute('aria-current');
+        byId[entry.target.id].setAttribute('aria-current', 'true');
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(byId).forEach(function (id) {
+      var section = document.getElementById(id);
+      if (section) observer.observe(section);
+    });
+  }
+
   /* Quick estimate form
      Set data-endpoint on the form to a POST endpoint (e.g. a Formspree URL) to
      deliver submissions. Without one, the form hands the request off as a text

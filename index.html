@@ -71,6 +71,126 @@
   </script>
 
   <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Structured data: shop (AutoRepair) with a 24/7 towing & roadside department (EmergencyService) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AutoRepair",
+        "@id": "#auto-repair",
+        "name": "NWI Auto Service and Towing",
+        "description": "Honest auto repair, diagnostics, brakes, suspension, tune-ups, emissions repair, and new, used, and heavy truck tires in Hammond, Indiana.",
+        "telephone": "+1-219-333-9293",
+        "address": { "@id": "#address" },
+        "hasMap": "https://www.google.com/maps?q=6704+Kennedy+Ave,+Hammond,+IN+46323",
+        "areaServed": [
+          { "@type": "City", "name": "Hammond", "containedInPlace": { "@type": "State", "name": "Indiana" } },
+          { "@type": "City", "name": "Whiting", "containedInPlace": { "@type": "State", "name": "Indiana" } },
+          { "@type": "City", "name": "East Chicago", "containedInPlace": { "@type": "State", "name": "Indiana" } },
+          { "@type": "City", "name": "Gary", "containedInPlace": { "@type": "State", "name": "Indiana" } },
+          { "@type": "City", "name": "Highland", "containedInPlace": { "@type": "State", "name": "Indiana" } },
+          { "@type": "City", "name": "Munster", "containedInPlace": { "@type": "State", "name": "Indiana" } }
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "09:00",
+            "closes": "17:00"
+          }
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "name": "Roberto",
+          "contactType": "customer service",
+          "telephone": "+1-219-333-9293",
+          "availableLanguage": "English"
+        },
+        "department": { "@id": "#emergency-towing" },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Auto repair and tire services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brake and suspension repair" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tune-ups" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emissions check and repair" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Engine and electrical diagnostics" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "New and used tires" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial and heavy truck tires" } }
+          ]
+        }
+      },
+      {
+        "@type": "EmergencyService",
+        "@id": "#emergency-towing",
+        "name": "NWI Auto Service and Towing: 24/7 Towing & Roadside Assistance",
+        "description": "24/7 emergency towing, roadside assistance, winch-out recovery, and heavy-duty towing for semi-trucks, box trucks, RVs, commercial fleets, and heavy equipment across Northwest Indiana.",
+        "telephone": "+1-219-333-9293",
+        "address": { "@id": "#address" },
+        "areaServed": [
+          { "@type": "City", "name": "Hammond", "containedInPlace": { "@type": "State", "name": "Indiana" } },
+          { "@type": "City", "name": "Whiting", "containedInPlace": { "@type": "State", "name": "Indiana" } },
+          { "@type": "City", "name": "East Chicago", "containedInPlace": { "@type": "State", "name": "Indiana" } },
+          { "@type": "City", "name": "Gary", "containedInPlace": { "@type": "State", "name": "Indiana" } },
+          { "@type": "City", "name": "Highland", "containedInPlace": { "@type": "State", "name": "Indiana" } },
+          { "@type": "City", "name": "Munster", "containedInPlace": { "@type": "State", "name": "Indiana" } }
+        ],
+        "parentOrganization": { "@id": "#auto-repair" },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "name": "Roberto",
+          "contactType": "emergency",
+          "telephone": "+1-219-333-9293",
+          "availableLanguage": "English",
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+          }
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Towing and roadside services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Flatbed towing" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wheel-lift towing" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Winch-out and vehicle recovery" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Heavy-duty and semi-truck towing" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Heavy equipment transport" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Flat tire change and repair" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Jump-starts" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Vehicle lockout service" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency fuel delivery" } }
+          ]
+        }
+      },
+      {
+        "@type": "PostalAddress",
+        "@id": "#address",
+        "streetAddress": "6704 Kennedy Ave",
+        "addressLocality": "Hammond",
+        "addressRegion": "IN",
+        "postalCode": "46323",
+        "addressCountry": "US"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="bg-asphalt text-chrome font-sans antialiased">
@@ -237,7 +357,7 @@
   <a href="#main" class="skip-link">Skip to main content</a>
 
   <!-- ===================== Sticky navigation ===================== -->
-  <header id="site-header" role="banner" class="site-header sticky top-0 z-50 border-b border-steel bg-asphalt/90 backdrop-blur">
+  <header id="site-header" class="site-header sticky top-0 z-50 border-b border-steel bg-asphalt/90 backdrop-blur">
     <div class="container-site flex h-[72px] items-center justify-between gap-4">
 
       <a href="#top" class="flex items-center gap-3 min-w-0" aria-label="NWI Auto Service and Towing, back to top">
@@ -926,12 +1046,89 @@
 
       </div>
     </section>
-
-    <!-- Phase 6: footer, schema -->
   </main>
 
-  <!-- Phase 6: footer -->
-  <footer id="site-footer" role="contentinfo"></footer>
+  <!-- ===================== Footer ===================== -->
+  <footer id="site-footer" class="site-footer" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="sr-only">Contact information and site links</h2>
+
+    <div class="container-site grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-12 lg:py-16">
+
+      <div class="sm:col-span-2 lg:col-span-3">
+        <a href="#top" class="inline-flex items-center gap-3" aria-label="NWI Auto Service and Towing, back to top">
+          <svg class="h-10 w-20 shrink-0" aria-hidden="true" focusable="false"><use href="#nwi-crest"/></svg>
+          <span class="flex flex-col leading-none">
+            <span class="whitespace-nowrap font-display text-lg font-bold uppercase tracking-wide text-chrome">NWI Auto Service</span>
+            <span class="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-silver">and Towing</span>
+          </span>
+        </a>
+        <p class="mt-5 max-w-sm text-sm text-silver">
+          Locally owned towing, roadside assistance, tire sales, and honest auto repair on Kennedy Ave in Hammond,
+          serving cars, pickups, semis, and heavy equipment across Northwest Indiana.
+        </p>
+        <address class="mt-6 grid gap-3 not-italic text-sm">
+          <a href="tel:2193339293" class="footer-contact" aria-label="Call Roberto 24/7 at (219) 333-9293">
+            <svg aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg>
+            <span><span class="block font-semibold text-chrome">(219) 333-9293</span><span class="text-silver">Ask for Roberto · 24/7 dispatch</span></span>
+          </a>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=6704+Kennedy+Ave,+Hammond,+IN+46323" target="_blank" rel="noopener" class="footer-contact">
+            <svg aria-hidden="true" focusable="false"><use href="#icon-map-pin"/></svg>
+            <span><span class="block font-semibold text-chrome">6704 Kennedy Ave</span><span class="text-silver">Hammond, IN 46323</span><span class="sr-only"> (opens Google Maps directions in a new tab)</span></span>
+          </a>
+        </address>
+      </div>
+
+      <nav class="lg:col-span-3" aria-labelledby="footer-services">
+        <h3 id="footer-services" class="footer-title">Services</h3>
+        <ul class="footer-links">
+          <li><a href="#roadside">24/7 Roadside Assistance</a></li>
+          <li><a href="#towing">Towing &amp; Recovery</a></li>
+          <li><a href="#heavy-duty">Heavy Duty &amp; Commercial</a></li>
+          <li><a href="#tires">New, Used &amp; Truck Tires</a></li>
+          <li><a href="#repair">Auto Repair &amp; Diagnostics</a></li>
+          <li><a href="#quote">Request an Estimate</a></li>
+        </ul>
+      </nav>
+
+      <nav class="lg:col-span-3" aria-labelledby="footer-areas">
+        <h3 id="footer-areas" class="footer-title">Service Area</h3>
+        <ul class="footer-links footer-links--areas">
+          <li><a href="#roadside" aria-label="24/7 towing and roadside assistance in Hammond">Hammond</a></li>
+          <li><a href="#roadside" aria-label="24/7 towing and roadside assistance in Whiting">Whiting</a></li>
+          <li><a href="#roadside" aria-label="24/7 towing and roadside assistance in East Chicago">East Chicago</a></li>
+          <li><a href="#roadside" aria-label="24/7 towing and roadside assistance in Gary">Gary</a></li>
+          <li><a href="#roadside" aria-label="24/7 towing and roadside assistance in Highland">Highland</a></li>
+          <li><a href="#roadside" aria-label="24/7 towing and roadside assistance in Munster">Munster</a></li>
+        </ul>
+        <p class="mt-4 text-sm text-silver">Plus the I-80/94 Borman Expressway, Cline Ave, and Indianapolis Blvd corridors.</p>
+      </nav>
+
+      <div class="lg:col-span-3">
+        <h3 class="footer-title">Hours</h3>
+        <dl class="grid gap-4 text-sm">
+          <div>
+            <dt class="font-semibold text-chrome">Towing &amp; Roadside</dt>
+            <dd class="mt-1"><span class="pill-emergency">Open 24/7</span></dd>
+          </div>
+          <div>
+            <dt class="font-semibold text-chrome">Shop &amp; Diagnostic Bays</dt>
+            <dd class="mt-1 text-silver">Mon–Sat: 8:00 AM – 8:00 PM</dd>
+            <dd class="text-silver">Sunday: 9:00 AM – 5:00 PM</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="border-t border-steel">
+      <div class="container-site flex flex-col gap-3 py-6 text-sm text-silver sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span data-year>2026</span> NWI Auto Service and Towing. All rights reserved.</p>
+        <a href="#top" class="inline-flex min-h-[44px] items-center gap-2 self-start font-medium text-silver hover:text-chrome sm:self-auto">
+          Back to top
+          <svg class="h-4 w-4 -rotate-90" aria-hidden="true" focusable="false"><use href="#icon-arrow-right"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
 
   <!-- ===================== Mobile emergency dialer ===================== -->
   <nav class="mobile-dialer md:hidden" aria-label="Quick contact">
